@@ -1026,9 +1026,12 @@ body .h5.medium {
 #h-website-home {
   background-color: var(--website-yellow);
   width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 #h-website-home .h-header-outer {
   border-bottom: 1px solid var(--deep-black);
+  width: 100%;
 }
 #h-website-home .h-header-outer .h-header-inner {
   display: flex;
@@ -1051,7 +1054,7 @@ body .h5.medium {
   color: var(--white);
   border-radius: 40px;
 }
-#h-website-home .h-content-pattern-outer .h-content-pattern {
+#h-website-home .h-content-text {
   display: flex;
   position: relative;
   margin: 0 auto;
@@ -1059,17 +1062,23 @@ body .h5.medium {
   padding: 0px 24px;
 }
 @media (min-width: 768px) {
-  #h-website-home .h-content-pattern-outer .h-content-pattern {
+  #h-website-home .h-content-text {
     padding: 0px 48px;
+    height: 462px;
   }
 }
-#h-website-home .h-content-pattern-outer .h-content-pattern .h-content-container .h-content {
+@media (min-width: 768px) {
+  #h-website-home .h-content-text .h-content-container {
+    width: 432px;
+  }
+}
+#h-website-home .h-content-text .h-content-container .h-content {
   margin-top: 96px;
 }
-#h-website-home .h-content-pattern-outer .h-content-pattern .h-content-container .h-content .h1 {
+#h-website-home .h-content-text .h-content-container .h-content .h1 {
   margin-top: 32px;
 }
-#h-website-home .h-content-pattern-outer .h-content-pattern .h-content-container .h-button a {
+#h-website-home .h-content-text .h-content-container .h-button a {
   display: inline-block;
   margin: 50px 0px 76px 0px;
   font-size: 1.25rem;
@@ -1080,21 +1089,33 @@ body .h5.medium {
   color: var(--white);
   border-radius: 40px;
 }
-#h-website-home .h-content-pattern-outer .h-content-pattern .h-pattern {
-  width: 100%;
-  display: flex;
-  position: relative;
+#h-website-home .hero-pattern {
+  display: none;
 }
-#h-website-home .h-content-pattern-outer .h-content-pattern .h-pattern img {
-  width: 100%;
-  position: absolute;
-  display: flex;
+@media (min-width: 768px) {
+  #h-website-home .hero-pattern {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 72px;
+    right: -150px;
+  }
+}
+@media (min-width: 1024px) {
+  #h-website-home .hero-pattern {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 72px;
+    right: 0;
+  }
 }
 
 #h-main-home .h-trending-article-list {
   margin: 0 auto;
   max-width: 1192px;
   padding: 48px 24px;
+  width: 100%;
 }
 @media (min-width: 768px) {
   #h-main-home .h-trending-article-list {

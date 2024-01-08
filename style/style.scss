@@ -1219,9 +1219,12 @@ body {
 #h-website-home {
     background-color: var(--website-yellow);
     width: 100%;
+    position: relative;
+    overflow: hidden;
 
     .h-header-outer {
         border-bottom: 1px solid var(--deep-black);
+        width: 100%;
 
         .h-header-inner {
             display: flex;
@@ -1248,53 +1251,66 @@ body {
         }
     }
 
-    .h-content-pattern-outer {
-        .h-content-pattern {
-            display: flex;
-            position: relative;
-            margin: 0 auto;
-            max-width: 1192px;
-            padding: 0px 24px;
+    .h-content-text {
+        display: flex;
+        position: relative;
+        margin: 0 auto;
+        max-width: 1192px;
+        padding: 0px 24px;
 
+        @include respond(medium) {
+            padding: 0px 48px;
+            height: 462px;
+        }
+
+        .h-content-container {
             @include respond(medium) {
-                padding: 0px 48px;
+                width: 432px;
             }
 
-            .h-content-container {
-                .h-content {
-                    margin-top: 96px;
+            .h-content {
+                margin-top: 96px;
 
-                    .h1 {
-                        margin-top: 32px;
-                    }
-                }
-
-                .h-button {
-                    a {
-                        display: inline-block;
-                        margin: 50px 0px 76px 0px;
-                        font-size: 1.25rem;
-                        font-weight: 400;
-                        text-decoration: none;
-                        padding: 10px 16px;
-                        background-color: var(--button-black);
-                        color: var(--white);
-                        border-radius: 40px;
-                    }
+                .h1 {
+                    margin-top: 32px;
                 }
             }
 
-            .h-pattern {
-                width: 100%;
-                display: flex;
-                position: relative;
-
-                img {
-                    width: 100%;
-                    position: absolute;
-                    display: flex;
+            .h-button {
+                a {
+                    display: inline-block;
+                    margin: 50px 0px 76px 0px;
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                    text-decoration: none;
+                    padding: 10px 16px;
+                    background-color: var(--button-black);
+                    color: var(--white);
+                    border-radius: 40px;
                 }
             }
+        }
+
+    }
+
+    .hero-pattern {
+        display: none;
+
+
+        @include respond(medium) {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 72px;
+            right: -150px;
+        }
+
+        @include respond(large) {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 72px;
+            right: 0;
         }
     }
 }
@@ -1304,6 +1320,7 @@ body {
         margin: 0 auto;
         max-width: 1192px;
         padding: 48px 24px;
+        width: 100%;
 
         @include respond(medium) {
             gap: 56px;
@@ -1377,7 +1394,7 @@ body {
                             display: flex;
                             flex-wrap: wrap;
 
-                            img{
+                            img {
                                 margin-left: 4px;
                             }
 
