@@ -179,19 +179,15 @@ body {
             display: flex;
 
             .search-wrapper {
-                display: flex;
-                justify-content: center;
-                background-color: var(--grey3);
-                padding: 0.625rem 0.75rem;
-                border-radius: 62.4375rem;
-                margin-left: 1rem;
-
-                @include respond(medium) {
-                    display: none;
-                }
+                display: none;
 
                 @include respond(small) {
-                    display: none;
+                    display: flex;
+                    justify-content: center;
+                    background-color: var(--grey3);
+                    padding: 0.625rem 0.75rem;
+                    border-radius: 62.4375rem;
+                    margin-left: 1rem;
                 }
 
                 img {
@@ -216,17 +212,14 @@ body {
             display: flex;
 
             .edit {
-                display: flex;
-                align-items: center;
-                text-decoration: none;
-                color: var(--grey1);
+                display: none;
 
                 @include respond(medium) {
-                    display: none;
-                }
-
-                @include respond(small) {
-                    display: none;
+                    display: block;
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: var(--grey1);
                 }
 
                 img {
@@ -235,14 +228,10 @@ body {
             }
 
             .search {
-                display: none;
-
-                @include respond(medium) {
-                    display: block;
-                }
+                display: block;
 
                 @include respond(small) {
-                    display: block;
+                    display: none;
                 }
             }
 
@@ -260,18 +249,14 @@ body {
     margin: 0 auto;
 
     #sections {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 1fr;
-        gap: 24px;
-        margin: 0px 24px;
+        grid-template-columns: 1fr;
 
         @include respond(medium) {
-            grid-template-columns: 1fr;
-        }
-
-        @include respond(small) {
-            grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 24px;
+            margin: 0px 24px;
         }
 
         #right-section {
@@ -369,27 +354,32 @@ body {
                                     margin-bottom: 16px;
 
                                     .h2.bold {
-                                        @include respond(small) {
-                                            margin-right: 48px;
-                                        }
-
                                         -webkit-line-clamp: 2;
                                         -webkit-box-orient: vertical;
                                         overflow: hidden;
                                         text-overflow: ellipsis;
                                         display: -webkit-box;
-                                        font-weight: 700;
                                     }
 
                                     .h3 {
-                                        -webkit-line-clamp: 2;
-                                        -webkit-box-orient: vertical;
-                                        overflow: hidden;
-                                        text-overflow: ellipsis;
-                                        display: -webkit-box;
+                                        display: none;
 
                                         @include respond(small) {
-                                            display: none;
+                                            display: block;
+                                            -webkit-line-clamp: 2;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            display: -webkit-box;
+                                        }
+
+                                        @include respond(medium) {
+                                            display: block;
+                                            -webkit-line-clamp: 3;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            display: -webkit-box;
                                         }
                                     }
                                 }
@@ -439,252 +429,249 @@ body {
                 }
             }
         }
-    }
 
-    #left-section {
-        width: 100%;
-        padding-top: 40px;
-        padding-left: 24px;
-        border-left: 1px solid var(--divider);
-
-        @include respond(medium) {
+        #left-section {
             display: none;
-        }
 
-        @include respond(small) {
-            display: none;
-        }
-
-        .staff-picks {
-            margin-bottom: 40px;
-
-            .h3.medium {
-                margin-bottom: 20px;
+            @include respond(medium) {
+                display: block;
+                width: 100%;
+                padding-top: 40px;
+                padding-left: 24px;
+                border-left: 1px solid var(--divider);
             }
 
-            a {
-                text-decoration: none;
-                color: var(--button-green);
-            }
+            .staff-picks {
+                margin-bottom: 40px;
 
-            .staff-picked-article {
-                margin-bottom: 20px;
-
-                .picked-article-header {
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 8px;
-
-                    .locator {
-                        color: var(--grey1);
-                        margin: 0px 4px 0px 4px;
-                    }
-
-                    .profile-image {
-                        margin-right: 4px;
-                        height: 24px;
-                        width: 24px;
-                        border-radius: 999px;
-                    }
+                .h3.medium {
+                    margin-bottom: 20px;
                 }
-            }
-        }
 
-        .misc-section {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
+                a {
+                    text-decoration: none;
+                    color: var(--button-green);
+                }
 
-            .writing-on-medium {
-                padding: 24px;
-                background-color: var(--misc-blue);
-                border-radius: 4px;
+                .staff-picked-article {
+                    margin-bottom: 20px;
 
-                .header {
-                    margin-bottom: 24px;
-
-                    .h3.bold {
+                    .picked-article-header {
                         display: flex;
-                        justify-content: space-between;
                         align-items: center;
-
-                        img {
-                            height: 20px;
-                            width: 20px;
-                        }
-                    }
-                }
-
-                .links {
-                    margin-bottom: 24px;
-
-                    .h3 {
                         margin-bottom: 8px;
-                    }
-                }
 
-                .btn {
-                    font-size: 14px;
-                    font-weight: 400;
-                    padding: 8px 12px;
-                    border-radius: 999px;
-                    color: var(--white);
-                    background-color: var(--button-black);
-                    border: none;
-                    outline: none;
-                }
-            }
+                        .locator {
+                            color: var(--grey1);
+                            margin: 0px 4px 0px 4px;
+                        }
 
-            .discover-writers {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                border-bottom: 1px solid var(--divider);
-                gap: 20px;
-                padding-bottom: 32px;
-
-                .connection {
-                    display: flex;
-                    align-items: center;
-                    gap: 4px;
-                }
-
-                .btn {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 290px;
-                    font-size: 14px;
-                    padding: 8px 12px;
-                    border-radius: 999px;
-                    color: var(--deep-black);
-                    background-color: var(--white);
-                    border: 1px solid var(--deep-black);
-
-                    svg {
-                        display: flex;
-                        align-items: flex-start;
-                    }
-                }
-
-                .h3 {
-                    text-align: center;
-                    margin: 0px 32px;
-                }
-
-                a {
-                    color: var(--button-green);
-                    text-decoration: none;
-                }
-            }
-
-            .recommended-topics {
-                .h3 {
-                    margin-bottom: 16px;
-                }
-
-                .recommended-lists {
-                    li {
-                        display: inline-block;
-                        list-style: none;
-                        text-decoration: none;
-                        padding: 8px 16px;
-                        background-color: var(--divider);
-                        border-radius: 999px;
-                        margin: 0px 8px 10px 0px;
-                    }
-                }
-
-                .h3.link {
-                    display: block;
-                    color: var(--button-green);
-                    text-decoration: none;
-                    margin-top: 14px;
-                }
-            }
-
-            .who-to-follow {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-
-                a {
-                    color: var(--button-green);
-                    text-decoration: none;
-                }
-
-                .recommended-follow {
-                    display: flex;
-
-                    .recommended-follow-profile {
-                        img {
-                            width: 32px;
-                            height: 32px;
-                            object-fit: cover;
+                        .profile-image {
+                            margin-right: 4px;
+                            height: 24px;
+                            width: 24px;
                             border-radius: 999px;
-                            margin-right: 16px;
                         }
                     }
+                }
+            }
 
-                    .name-title {
-                        -webkit-line-clamp: 2;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        display: -webkit-box;
+            .misc-section {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                .writing-on-medium {
+                    padding: 24px;
+                    background-color: var(--misc-blue);
+                    border-radius: 4px;
+
+                    .header {
+                        margin-bottom: 24px;
 
                         .h3.bold {
                             display: flex;
+                            justify-content: space-between;
                             align-items: center;
-                            margin-bottom: 4px;
 
                             img {
                                 height: 20px;
                                 width: 20px;
-                                margin-right: 8px;
                             }
-                        }
-
-                        .h4 {
-                            color: var(--grey1);
                         }
                     }
 
-                    .follow-button {
-                        height: 32px;
+                    .links {
+                        margin-bottom: 24px;
+
+                        .h3 {
+                            margin-bottom: 8px;
+                        }
+                    }
+
+                    .btn {
                         font-size: 14px;
-                        padding: 0px 16px;
-                        border: 1px solid var(--button-black);
-                        background-color: var(--white);
+                        font-weight: 400;
+                        padding: 8px 12px;
                         border-radius: 999px;
-                        margin-left: 16px;
+                        color: var(--white);
+                        background-color: var(--button-black);
+                        border: none;
+                        outline: none;
                     }
                 }
-            }
 
-            .reading-list {
-                overflow: hidden;
+                .discover-writers {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border-bottom: 1px solid var(--divider);
+                    gap: 20px;
+                    padding-bottom: 32px;
 
-                .add-story {
-                    width: 303px;
-
-                    .h4 {
+                    .connection {
                         display: flex;
                         align-items: center;
-                        color: var(--grey1);
+                        gap: 4px;
+                    }
 
-                        span {
-                            width: 24px;
+                    .btn {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 290px;
+                        font-size: 14px;
+                        padding: 8px 12px;
+                        border-radius: 999px;
+                        color: var(--deep-black);
+                        background-color: var(--white);
+                        border: 1px solid var(--deep-black);
 
+                        svg {
+                            display: flex;
+                            align-items: flex-start;
+                        }
+                    }
+
+                    .h3 {
+                        text-align: center;
+                        margin: 0px 32px;
+                    }
+
+                    a {
+                        color: var(--button-green);
+                        text-decoration: none;
+                    }
+                }
+
+                .recommended-topics {
+                    .h3 {
+                        margin-bottom: 16px;
+                    }
+
+                    .recommended-lists {
+                        li {
+                            display: inline-block;
+                            list-style: none;
+                            text-decoration: none;
+                            padding: 8px 16px;
+                            background-color: var(--divider);
+                            border-radius: 999px;
+                            margin: 0px 8px 10px 0px;
+                        }
+                    }
+
+                    .h3.link {
+                        display: block;
+                        color: var(--button-green);
+                        text-decoration: none;
+                        margin-top: 14px;
+                    }
+                }
+
+                .who-to-follow {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+
+                    a {
+                        color: var(--button-green);
+                        text-decoration: none;
+                    }
+
+                    .recommended-follow {
+                        display: flex;
+
+                        .recommended-follow-profile {
                             img {
+                                width: 32px;
+                                height: 32px;
+                                object-fit: cover;
+                                border-radius: 999px;
+                                margin-right: 16px;
+                            }
+                        }
+
+                        .name-title {
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+
+                            .h3.bold {
                                 display: flex;
                                 align-items: center;
-                                width: 24px;
+                                margin-bottom: 4px;
+
+                                img {
+                                    height: 20px;
+                                    width: 20px;
+                                    margin-right: 8px;
+                                }
                             }
 
-                            color: var(--button-black);
+                            .h4 {
+                                color: var(--grey1);
+                            }
+                        }
+
+                        .follow-button {
+                            height: 32px;
+                            font-size: 14px;
+                            padding: 0px 16px;
+                            border: 1px solid var(--button-black);
+                            background-color: var(--white);
+                            border-radius: 999px;
+                            margin-left: 16px;
+                        }
+                    }
+                }
+
+                .reading-list {
+                    overflow: hidden;
+
+                    .add-story {
+                        width: 303px;
+
+                        .h4 {
+                            display: flex;
+                            align-items: center;
+                            color: var(--grey1);
+
+                            span {
+                                width: 24px;
+
+                                img {
+                                    display: flex;
+                                    align-items: center;
+                                    width: 24px;
+                                }
+
+                                color: var(--button-black);
+                            }
                         }
                     }
                 }
