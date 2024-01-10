@@ -332,36 +332,36 @@ body {
                     border-bottom: 1px solid var(--divider);
                     margin-top: 24px;
                     display: flex;
+                    flex-direction: column;
 
-                    .article-content-body {
+                    .article-header {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 12px;
 
-                        .article-header {
-                            display: flex;
-                            align-items: center;
-                            margin-bottom: 12px;
+                        .article-writer-image {
+                            height: 24px;
+                            width: 24px;
+                            border-radius: 99px;
+                            object-fit: cover;
+                        }
 
-                            .article-writer-image {
-                                height: 24px;
-                                width: 24px;
-                                border-radius: 99px;
-                                object-fit: cover;
-                            }
+                        .h4 {
+                            margin-left: 8px;
 
-                            .h4 {
-                                margin-left: 8px;
-
-                                span {
-                                    color: var(--grey1);
-                                }
-                            }
-
-                            img {
-                                margin-left: 4px;
+                            span {
+                                color: var(--grey1);
                             }
                         }
 
-                        .article-content {
+                        img {
+                            margin-left: 4px;
+                        }
+                    }
 
+                    .article-content-body {
+                        display: flex;
+                        .article-content {
                             .article-body {
                                 .article-title-container {
                                     display: flex;
@@ -425,10 +425,48 @@ body {
                                     }
 
                                     .article-actions {
-                                        img {
-                                            margin-left: 24px;
-                                            width: 24px;
-                                            height: 24px;
+                                        display: flex;
+                                        gap: 16px;
+
+                                        .more-action-container {
+                                            position: relative;
+                                            display: inline-block;
+
+                                            .more-icon:hover{
+                                                cursor: pointer;
+                                            }
+
+                                            .more-menu-wrap {
+                                                display: none;
+                                                position: absolute;
+                                                top: 100%;
+                                                right: 10%;
+                                                width: 200px;
+                                                z-index: 1;
+
+                                                .more-menu {
+                                                    width: 100%;
+                                                    background: var(--white);
+                                                    padding: 8px 12px;
+                                                    border: 1px solid var(--divider);
+                                                    border-radius: 8px;
+                                                    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(0, 0, 0, 0.20);
+
+                                                    .h4 {
+                                                        color: var(--grey1);
+                                                        padding: 8px 4px;
+                                                    }
+
+                                                    .h4:hover {
+                                                        font-weight: 700;
+                                                        color: var(--deep-black);
+                                                    }
+                                                }
+                                            }
+
+                                            .show{
+                                                display: block;
+                                            }
                                         }
                                     }
                                 }

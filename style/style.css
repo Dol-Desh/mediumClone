@@ -264,27 +264,31 @@ body .h5.bold {
   border-bottom: 1px solid var(--divider);
   margin-top: 24px;
   display: flex;
+  flex-direction: column;
 }
-#main-section #sections #right-section .article-list.active .article .article-content-body .article-header {
+#main-section #sections #right-section .article-list.active .article .article-header {
   display: flex;
   align-items: center;
   margin-bottom: 12px;
 }
-#main-section #sections #right-section .article-list.active .article .article-content-body .article-header .article-writer-image {
+#main-section #sections #right-section .article-list.active .article .article-header .article-writer-image {
   height: 24px;
   width: 24px;
   border-radius: 99px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#main-section #sections #right-section .article-list.active .article .article-content-body .article-header .h4 {
+#main-section #sections #right-section .article-list.active .article .article-header .h4 {
   margin-left: 8px;
 }
-#main-section #sections #right-section .article-list.active .article .article-content-body .article-header .h4 span {
+#main-section #sections #right-section .article-list.active .article .article-header .h4 span {
   color: var(--grey1);
 }
-#main-section #sections #right-section .article-list.active .article .article-content-body .article-header img {
+#main-section #sections #right-section .article-list.active .article .article-header img {
   margin-left: 4px;
+}
+#main-section #sections #right-section .article-list.active .article .article-content-body {
+  display: flex;
 }
 #main-section #sections #right-section .article-list.active .article .article-content-body .article-content .article-body .article-title-container {
   display: flex;
@@ -343,10 +347,43 @@ body .h5.bold {
   border-radius: 999px;
   margin-right: 8px;
 }
-#main-section #sections #right-section .article-list.active .article .article-content-body .article-content .article-body .article-details .article-actions img {
-  margin-left: 24px;
-  width: 24px;
-  height: 24px;
+#main-section #sections #right-section .article-list.active .article .article-content-body .article-content .article-body .article-details .article-actions {
+  display: flex;
+  gap: 16px;
+}
+#main-section #sections #right-section .article-list.active .article .article-content-body .article-content .article-body .article-details .article-actions .more-action-container {
+  position: relative;
+  display: inline-block;
+}
+#main-section #sections #right-section .article-list.active .article .article-content-body .article-content .article-body .article-details .article-actions .more-action-container .more-icon:hover {
+  cursor: pointer;
+}
+#main-section #sections #right-section .article-list.active .article .article-content-body .article-content .article-body .article-details .article-actions .more-action-container .more-menu-wrap {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  width: 200px;
+  z-index: 1;
+}
+#main-section #sections #right-section .article-list.active .article .article-content-body .article-content .article-body .article-details .article-actions .more-action-container .more-menu-wrap .more-menu {
+  width: 100%;
+  background: var(--white);
+  padding: 8px 12px;
+  border: 1px solid var(--divider);
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1), 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+#main-section #sections #right-section .article-list.active .article .article-content-body .article-content .article-body .article-details .article-actions .more-action-container .more-menu-wrap .more-menu .h4 {
+  color: var(--grey1);
+  padding: 8px 4px;
+}
+#main-section #sections #right-section .article-list.active .article .article-content-body .article-content .article-body .article-details .article-actions .more-action-container .more-menu-wrap .more-menu .h4:hover {
+  font-weight: 700;
+  color: var(--deep-black);
+}
+#main-section #sections #right-section .article-list.active .article .article-content-body .article-content .article-body .article-details .article-actions .more-action-container .show {
+  display: block;
 }
 #main-section #sections #right-section .article-list.active .article .article-image img {
   display: none;
