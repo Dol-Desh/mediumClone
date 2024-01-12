@@ -211,6 +211,7 @@ body {
 
         .top-nav-icons {
             display: flex;
+            gap: 24px;
 
             .edit {
                 display: none;
@@ -239,7 +240,15 @@ body {
             img {
                 height: 24px;
                 width: 24px;
-                margin-left: 24px;
+                // margin-left: 24px;
+            }
+
+            .account{
+                .account-menu-wrap{
+                    .menu-write{
+                        
+                    }
+                }
             }
         }
     }
@@ -248,11 +257,15 @@ body {
 #main-section {
     max-width: 1024px;
     margin: 0 auto;
+    height: 100vh;
+    overflow-y: scroll;
 
     #sections {
         grid-template-columns: 1fr;
         margin: 0px 24px;
-
+        position: sticky;
+        top: 0;
+        height: auto;
 
         @include respond(large) {
             display: grid;
@@ -268,19 +281,21 @@ body {
             flex-direction: column;
             width: 100%;
             margin-top: 24px;
-            overflow: hidden;
+            position: relative;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
 
             @include respond(large) {
                 flex-grow: 2;
                 flex-basis: 70%;
             }
 
-
             #tab-navigation {
                 display: flex;
                 align-items: center;
-                position: sticky;
-                top: 0;
+
+                background-color: var(--white);
 
                 .navigation-content {
                     border-bottom: 1px solid var(--divider);
@@ -327,9 +342,14 @@ body {
 
             .article-list:not(.active) {
                 display: none;
+                // height: auto;
+                // overflow-y: auto;
             }
 
             .article-list.active {
+                // height: 100vh;
+                // overflow-y: auto;
+
                 .article {
                     border-bottom: 1px solid var(--divider);
                     margin-top: 24px;
@@ -363,6 +383,7 @@ body {
 
                     .article-content-body {
                         display: flex;
+
                         .article-content {
                             .article-body {
                                 .article-title-container {
@@ -434,7 +455,7 @@ body {
                                             position: relative;
                                             display: inline-block;
 
-                                            .more-icon:hover{
+                                            .more-icon:hover {
                                                 cursor: pointer;
                                             }
 
@@ -466,7 +487,7 @@ body {
                                                 }
                                             }
 
-                                            .show{
+                                            .show {
                                                 display: block;
                                             }
                                         }

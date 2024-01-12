@@ -60,15 +60,14 @@ window.onclick = function (event) {
 };
 
 //sticky headr
-const tabNavigation = document.querySelector("#tab-navigation");
-const scrollWatcher = document.createElement("div");
+// const tabNavigation = document.getElementById("#tab-navigation");
+// const scrollWatcher = document.createElement("div");
 
-scrollWatcher.setAttribute("data-scroll-watcher", "");
-tabNavigation.before(scrollWatcher);
+// scrollWatcher.setAttribute("data-scroll-watcher", "");
+// tabNavigation.before(scrollWatcher);
 
-const navObserver =new IntersectionObserver((entries) => {
-  console.log(entries);
-  tabNavigation.classList.toggle("sticking");
-});
+// const navObserver = new IntersectionObserver((entries) => {
+//   tabNavigation.classList.toggle("sticking", !entries[0].isIntersecting);
+// }, {rootMargin: "200px 0px 0px 0px"});
 
-navObserver.observe(scrollWatcher);
+// navObserver.observe(scrollWatcher);
