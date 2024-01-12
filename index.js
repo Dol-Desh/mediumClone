@@ -43,18 +43,32 @@ allTabs.forEach((tab, index) => {
 });
 
 function myFunction() {
-    document.getElementById("moreMenuDropdown").classList.toggle("show");
-  }
-  
-  window.onclick = function (event) {
-    if (!event.target.matches(".more-icon")) {
-      var dropdowns = document.getElementsByClassName("more-menu-wrap");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains("show")) {
-          openDropdown.classList.remove("show");
-        }
+  document.getElementById("moreMenuDropdown").classList.toggle("show");
+}
+
+window.onclick = function (event) {
+  if (!event.target.matches(".more-icon")) {
+    var dropdowns = document.getElementsByClassName("more-menu-wrap");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
       }
     }
-  };
+  }
+};
+
+//sticky headr
+const tabNavigation = document.querySelector("#tab-navigation");
+const scrollWatcher = document.createElement("div");
+
+scrollWatcher.setAttribute("data-scroll-watcher", "");
+tabNavigation.before(scrollWatcher);
+
+const navObserver =new IntersectionObserver((entries) => {
+  console.log(entries);
+  tabNavigation.classList.toggle("sticking");
+});
+
+navObserver.observe(scrollWatcher);

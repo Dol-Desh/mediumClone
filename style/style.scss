@@ -279,6 +279,8 @@ body {
             #tab-navigation {
                 display: flex;
                 align-items: center;
+                position: sticky;
+                top: 0;
 
                 .navigation-content {
                     border-bottom: 1px solid var(--divider);

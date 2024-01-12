@@ -222,6 +222,8 @@ body .h5.bold {
 #main-section #sections #right-section #tab-navigation {
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
 }
 #main-section #sections #right-section #tab-navigation .navigation-content {
   border-bottom: 1px solid var(--divider);
