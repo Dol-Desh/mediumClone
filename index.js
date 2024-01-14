@@ -17,8 +17,32 @@
 //     // allArticle[index].classList.add("active");
 // })
 
-// //Javascript code for changing the contents of tabs as the tab changes
+//Function for all all modals
+function setupModal(modalId, openModalId, closeModalId) {
+  const modal = document.getElementById(modalId);
+  const openModal = document.getElementById(openModalId);
+  const closeModal = document.getElementById(closeModalId);
+  const body = document.body;
 
+  if (modal && openModal && closeModal) {
+    openModal.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.showModal();
+      body.classList.add("no-scroll");
+    });
+
+    closeModal.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.close();
+      body.classList.remove("no-scroll");
+    });
+  }
+}
+
+setupModal("get-started-modal", "get-started-menu", "get-started-close");
+
+
+// //Javascript code for changing the contents of tabs as the tab changes
 const allTabs = document.querySelectorAll(".tab-button");
 const allArticles = document.querySelectorAll(".article-list");
 
@@ -46,6 +70,7 @@ function myFunction() {
   document.getElementById("moreMenuDropdown").classList.toggle("show");
 }
 
+//dropdown code
 window.onclick = function (event) {
   if (!event.target.matches(".more-icon")) {
     var dropdowns = document.getElementsByClassName("more-menu-wrap");

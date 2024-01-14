@@ -104,6 +104,11 @@ body .h5.bold {
   font-weight: 700;
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 #website-header .app-nav {
   display: flex;
   align-items: center;
@@ -1227,6 +1232,89 @@ body .h5.bold {
   background-color: var(--button-black);
   color: var(--white);
   border-radius: 40px;
+}
+#h-website-home #get-started-modal {
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  max-height: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  overflow-y: hidden;
+  z-index: 800;
+}
+#h-website-home #get-started-modal .modal-container {
+  background-color: var(--white);
+  display: flex;
+  max-height: 100%;
+  flex-direction: column;
+  max-width: 678px;
+  box-shadow: 0px 26px 80px 0px rgba(0, 0, 0, 0.2), 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 768px) {
+  #h-website-home #get-started-modal .modal-container {
+    margin: 12% auto;
+  }
+}
+#h-website-home #get-started-modal .modal-container .get-started-close img.icon-close {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+#h-website-home #get-started-modal .modal-container .get-started-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 132px 56px;
+}
+@media (min-width: 768px) {
+  #h-website-home #get-started-modal .modal-container .get-started-content {
+    margin: 44px 56px;
+    padding: 44px 56px;
+  }
+}
+#h-website-home #get-started-modal .modal-container .get-started-content .get-started-text {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: "Georgia", sans-serif;
+  margin-bottom: 56px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#h-website-home #get-started-modal .modal-container .get-started-content .sign-up-options {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+#h-website-home #get-started-modal .modal-container .get-started-content .sign-up-options .sign-up-method {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--button-black);
+  border-radius: 999px;
+  padding: 8px 16px;
+}
+#h-website-home #get-started-modal .modal-container .get-started-content .h3 {
+  color: var(--deep-black);
+}
+#h-website-home #get-started-modal .modal-container .get-started-content .h3 span {
+  color: var(--button-green);
+  font-weight: 700;
+}
+#h-website-home #get-started-modal .modal-container .get-started-content .h4 {
+  margin-top: 100px;
+  text-align: center;
+  color: var(--grey1);
+}
+#h-website-home #get-started-modal .modal-container .get-started-content .h4 span {
+  text-decoration: underline;
 }
 #h-website-home .h-content-text {
   display: flex;

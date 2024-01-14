@@ -23,25 +23,60 @@
                 </div>
 
                 <div class="h-header-button">
-                    <a href="">Get started</a>
+                    <a id="get-started-menu" href="">Get started</a>
                 </div>
             </div>
         </header>
 
-            <div class="h-content-text">
-                <div class="h-content-container">
-                    <div class="h-content">
-                        <h1 class="home-heading">Stay curious</h1>
-                        <h2 class="h1">Discover stories, thinking, and
-                            expertise from writers on any
-                            topic.</h2>
+        <dialog id="get-started-modal" class="modal">
+            <div class="modal-container">
+
+                <div id="get-started-close">
+                    <img class="icon-close" src="assets/x-close.svg" alt="">
+                </div>
+
+                <div class="get-started-content">
+                    <h4 class="get-started-text">Join Medium.</h4>
+
+                    <div class="sign-up-options">
+                        <div class="sign-up-method">
+                            <img src="" alt="">
+                            <h3 class="h3">Sign up with Google</h4>
+                        </div>
+
+                        <div class="sign-up-method">
+                            <img src="" alt="">
+                            <h3 class="h3">Sign up with Facebook</h4>
+                        </div>
+
+                        <div class="sign-up-method">
+                            <img src="" alt="">
+                            <h3 class="h3">Sign up with email</h4>
+                        </div>
                     </div>
 
-                    <div class="h-button">
-                        <a href="">Start reading</a>
-                    </div>
+                    <h3 class="h3">Already have an account? <span>Sign in</span></h3>
+
+                    <h4 class="h4">Click "Sign up" to agree to Medium's <span>Terms of Service</span> and acknowledge that Medium's
+                        <span>Privacy Policy</span> applies to you.</h4>
                 </div>
             </div>
+        </dialog>
+
+        <div class="h-content-text">
+            <div class="h-content-container">
+                <div class="h-content">
+                    <h1 class="home-heading">Stay curious</h1>
+                    <h2 class="h1">Discover stories, thinking, and
+                        expertise from writers on any
+                        topic.</h2>
+                </div>
+
+                <div class="h-button">
+                    <a href="">Start reading</a>
+                </div>
+            </div>
+        </div>
 
         <img class="hero-pattern" src="assets/home-pattern.svg" alt="">
 
@@ -1287,6 +1322,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
