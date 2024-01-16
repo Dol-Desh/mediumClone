@@ -1173,7 +1173,11 @@ body {
                 max-width: 680px;
                 margin: 0 auto;
 
-                @include respond(medium & small) {
+                @include respond(small) {
+                    margin-bottom: 32px;
+                }
+
+                @include respond(medium) {
                     margin-bottom: 32px;
                 }
 
@@ -1188,24 +1192,19 @@ body {
                 .s-more-from-writer-container {
                     display: grid;
                     row-gap: 56px;
-                    grid-template-columns: 1fr 1fr;
+                    grid-template-columns: 1fr;
                     margin-bottom: 24px;
                     gap: 32px;
+
+                    @include respond(medium) {
+                        grid-template-columns: 1fr 1fr;
+                    }
 
                     @include respond(large) {
                         border-bottom: 1px solid var(--grey4);
                     }
 
-                    @include respond(medium) {
-                        grid-template-columns: 1fr;
-                    }
-
-                    @include respond(small) {
-                        grid-template-columns: 1fr;
-                    }
-
                     .s-more-from-writer-content {
-
                         .img {
                             max-width: 100%;
                             object-fit: cover;
@@ -1334,7 +1333,7 @@ body {
                         grid-template-columns: 1fr;
                         gap: 16px;
 
-                        @include respond(large) {
+                        @include respond(medium) {
                             display: grid;
                             grid-template-columns: 1fr 1fr;
                             grid-template-rows: 2fr;
