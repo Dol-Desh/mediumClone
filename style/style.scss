@@ -1316,112 +1316,116 @@ body {
                         }
                     }
                 }
-            }
 
-            .s-lists {
-                margin: 0 auto;
-                max-width: 680px;
+                &.new-section {
 
-                .s-list-container {
+                    .s-lists {
+                        display: block;
+                        margin: 0 auto;
+                        max-width: 680px;
 
-                    #title {
-                        margin-bottom: 32px;
-                    }
+                        .s-list-container {
 
-                    .s-list-content-container {
-                        display: grid;
-                        grid-template-columns: 1fr;
-                        gap: 16px;
+                            #title {
+                                margin-bottom: 32px;
+                            }
 
-                        @include respond(medium) {
-                            display: grid;
-                            grid-template-columns: 1fr 1fr;
-                            grid-template-rows: 2fr;
-                            gap: 16px;
-                        }
+                            .s-list-content-container {
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                gap: 16px;
 
-                        .s-list-content-images {
-                            display: flex;
-
-                            .s-list-images {
-                                position: relative;
-                                max-width: 93px;
-                                position: relative;
-                                display: flex;
-                                height: 48px;
-
-                                .s-list-image-1-container {
-                                    position: relative;
-                                    border-radius: 2px;
-                                    background-color: var(--white);
-                                    border-radius: 2px;
-                                    z-index: 3;
-                                    border-right: 3px solid var(--white);
-                                    height: 48px;
-
-                                    .s-list-image-1 {
-                                        height: 48px;
-                                        width: 48px;
-                                        border-radius: 2px;
-                                        object-fit: cover;
-                                    }
+                                @include respond(medium) {
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr;
+                                    grid-template-rows: 2fr;
+                                    gap: 16px;
                                 }
 
-                                .s-list-image-2-container {
-                                    position: relative;
-                                    border-radius: 2px;
-                                    background-color: var(--white);
-                                    border-radius: 2px;
-                                    z-index: 2;
-                                    border-right: 3px solid var(--white);
-                                    left: -24px;
-                                    height: 48px;
+                                .s-list-content-images {
+                                    display: flex;
 
-                                    .s-list-image-2 {
+                                    .s-list-images {
+                                        position: relative;
+                                        max-width: 93px;
+                                        position: relative;
+                                        display: flex;
                                         height: 48px;
-                                        width: 48px;
-                                        border-radius: 2px;
-                                        object-fit: cover;
-                                    }
-                                }
 
-                                .s-list-image-3-container {
-                                    position: relative;
-                                    border-radius: 2px;
-                                    background-color: var(--white);
-                                    border-radius: 2px;
-                                    z-index: 1;
-                                    border-right: 3px solid var(--white);
-                                    left: -56px;
-                                    height: 48px;
+                                        .s-list-image-1-container {
+                                            position: relative;
+                                            border-radius: 2px;
+                                            background-color: var(--white);
+                                            border-radius: 2px;
+                                            z-index: 3;
+                                            border-right: 3px solid var(--white);
+                                            height: 48px;
 
-                                    .s-list-image-3 {
-                                        height: 48px;
-                                        width: 48px;
-                                        border-radius: 2px;
-                                        object-fit: cover;
+                                            .s-list-image-1 {
+                                                height: 48px;
+                                                width: 48px;
+                                                border-radius: 2px;
+                                                object-fit: cover;
+                                            }
+                                        }
+
+                                        .s-list-image-2-container {
+                                            position: relative;
+                                            border-radius: 2px;
+                                            background-color: var(--white);
+                                            border-radius: 2px;
+                                            z-index: 2;
+                                            border-right: 3px solid var(--white);
+                                            left: -24px;
+                                            height: 48px;
+
+                                            .s-list-image-2 {
+                                                height: 48px;
+                                                width: 48px;
+                                                border-radius: 2px;
+                                                object-fit: cover;
+                                            }
+                                        }
+
+                                        .s-list-image-3-container {
+                                            position: relative;
+                                            border-radius: 2px;
+                                            background-color: var(--white);
+                                            border-radius: 2px;
+                                            z-index: 1;
+                                            border-right: 3px solid var(--white);
+                                            left: -56px;
+                                            height: 48px;
+
+                                            .s-list-image-3 {
+                                                height: 48px;
+                                                width: 48px;
+                                                border-radius: 2px;
+                                                object-fit: cover;
+                                            }
+                                        }
                                     }
                                 }
                             }
-                        }
-                    }
 
-                    .s-list-content-text {
-                        margin-left: 8px;
+                            .s-list-content-text {
+                                margin-left: 8px;
 
-                        .h3.medium {
-                            -webkit-line-clamp: 2;
-                            -webkit-box-orient: vertical;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            display: -webkit-box;
-                        }
+                                .h3.medium {
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                }
 
-                        .h4 {
-                            display: flex;
-                            gap: 8px;
-                            color: var(--grey1);
-                            margin-top: 4px;
+                                .h4 {
+                                    display: flex;
+                                    gap: 8px;
+                                    color: var(--grey1);
+                                    margin-top: 4px;
+                                }
+                            }
                         }
                     }
                 }
@@ -1494,12 +1498,12 @@ body {
                 margin: 12% auto;
             }
 
-            .get-started-close {
-                img.icon-close {
-                    display: inline-flex;
-                    align-items: flex-end;
-                    justify-content: flex-end;
-                }
+            #get-started-close {
+                display: flex;
+                justify-content: flex-end;
+                cursor: pointer;
+                margin-top: 12px;
+                margin-right: 12px;
             }
 
             .get-started-content {
@@ -1539,11 +1543,17 @@ body {
                         border: 1px solid var(--button-black);
                         border-radius: 999px;
                         padding: 8px 16px;
+                        background-color: #fff;
+                        position: relative;
+                        cursor: pointer;
 
-                        // .h3{
-                        //     display: inline-flex;
-                        //     flex-wrap: wrap;
-                        // }
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            left: 4px;
+                            position: absolute;
+                            margin-left: 8px;
+                        }
                     }
                 }
 
@@ -2063,7 +2073,6 @@ body {
                 display: none;
             }
         }
-
 
         .h-footer-download-links {
             display: flex;
