@@ -18,10 +18,12 @@
 // })
 
 //Function for all all modals
-function setupModal(modalId, openModalId, closeModalId) {
+function setupModal( modalId, openModalId, closeModalId, sourceID, destinationID) 
+{
   const modal = document.getElementById(modalId);
   const openModal = document.getElementById(openModalId);
   const closeModal = document.getElementById(closeModalId);
+  const switchModal = document.getElementById(sourceID);
   const body = document.body;
 
   if (modal && openModal && closeModal) {
@@ -36,11 +38,22 @@ function setupModal(modalId, openModalId, closeModalId) {
       modal.close();
       body.classList.remove("no-scroll");
     });
+
+    if (switchModal) {
+      switchModal.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.close();
+        const switchToModal = document.getElementById(destinationID);
+        if (switchToModal) {
+          switchToModal.showModal();
+        }
+      });
+    }
   }
 }
 
-setupModal("get-started-modal", "get-started-menu", "get-started-close");
-
+setupModal("sign-up-modal", "get-started-menu", "get-started-close", "sign-in-button", "sign-in-modal");
+setupModal("sign-in-modal", "sign-in-button", "sign-in-close", "sign-up-button", "sign-up-modal");
 
 // //Javascript code for changing the contents of tabs as the tab changes
 const allTabs = document.querySelectorAll(".tab-button");
