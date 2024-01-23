@@ -1485,20 +1485,26 @@ body {
         background-color: rgba(255, 255, 255, 0.95);
         overflow-y: hidden;
         z-index: 800;
+        position: relative;
 
         .modal-container {
             background-color: var(--white);
             display: flex;
             max-height: 100%;
             flex-direction: column;
+            position: absolute;
+            top: 12%;
+            left: 24%;
             max-width: 678px;
             box-shadow: 0px 26px 80px 0px rgba(0, 0, 0, 0.20), 0px 0px 1px 0px rgba(0, 0, 0, 0.20);
 
             @include respond(medium) {
-                margin: 12% auto;
+                // margin: 0 auto;
+                top: 12%;
+                left: 30%;
             }
 
-            #get-started-close {
+            #sign-up-close, #sign-in-close {
                 display: flex;
                 justify-content: flex-end;
                 cursor: pointer;

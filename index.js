@@ -52,7 +52,7 @@ function setupModal( modalId, openModalId, closeModalId, sourceID, destinationID
   }
 }
 
-setupModal("sign-up-modal", "get-started-menu", "get-started-close", "sign-in-button", "sign-in-modal");
+setupModal("sign-up-modal", "get-started-menu", "sign-up-close", "sign-in-button", "sign-in-modal");
 setupModal("sign-in-modal", "sign-in-button", "sign-in-close", "sign-up-button", "sign-up-modal");
 
 // //Javascript code for changing the contents of tabs as the tab changes
