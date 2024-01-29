@@ -949,33 +949,19 @@ body .h5.bold {
 #s-footer .s-footer-container .s-writer-profile-container .s-about-writer .h3 span {
   text-decoration: underline;
 }
-#s-footer .s-footer-container .s-more-from-writer-outer-container {
-  padding: 0px 24px;
-}
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer,
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer {
   max-width: 680px;
   margin: 0 auto;
+  padding: 0px 24px;
 }
-@media (min-width: 390px) {
-  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer,
-  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer {
-    margin-bottom: 32px;
-  }
-}
-@media (min-width: 768px) {
-  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer,
-  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer {
-    margin-bottom: 32px;
-  }
-}
-#s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .h3.medium,
-#s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .h3.medium {
+#s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .h3,
+#s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .h3 {
   margin: 40px 0px 32px 0px;
 }
-#s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .h2.medium,
-#s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .h2.medium {
-  margin: 40px 0px 32px 0px;
+#s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .h2.title,
+#s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .h2.title {
+  margin-bottom: 56px;
 }
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container,
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-from-writer-container {
@@ -989,11 +975,6 @@ body .h5.bold {
   #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container,
   #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-from-writer-container {
     grid-template-columns: 1fr 1fr;
-  }
-}
-@media (min-width: 1024px) {
-  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container,
-  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-from-writer-container {
     border-bottom: 1px solid var(--grey4);
   }
 }
@@ -1002,12 +983,6 @@ body .h5.bold {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-@media (min-width: 768px) {
-  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer,
-  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer {
-    border-bottom: 1px solid var(--grey4);
-  }
 }
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer .s-article-from-writer-profile,
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer .s-article-from-writer-profile {
@@ -1038,6 +1013,7 @@ body .h5.bold {
   text-overflow: ellipsis;
   display: -webkit-box;
   color: var(--grey1);
+  height: 2.75rem;
   margin: 8px 0px 16px 0px;
 }
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer .s-article-information .s-article-duration-and-date,
@@ -1053,12 +1029,6 @@ body .h5.bold {
   justify-content: space-between;
   margin-bottom: 32px;
 }
-@media (min-width: 390px) {
-  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer .s-article-information .s-article-actions,
-  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer .s-article-information .s-article-actions {
-    margin-bottom: 32px;
-  }
-}
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer .s-article-information .s-article-actions .s-article-actions-left,
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer .s-article-information .s-article-actions .s-article-actions-left {
   display: flex;
@@ -1072,6 +1042,7 @@ body .h5.bold {
 }
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer .s-article-information .s-article-actions .s-article-actions-left .s-article-actions-vote .h4,
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer .s-article-information .s-article-actions .s-article-actions-left .s-article-actions-vote .h4 {
+  margin-left: 4px;
   color: var(--grey1);
 }
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer .s-article-information .s-article-actions .s-article-actions-left .s-article-actions-comment,
@@ -1081,6 +1052,7 @@ body .h5.bold {
 }
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer .s-article-information .s-article-actions .s-article-actions-left .s-article-actions-comment .h4,
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer .s-article-information .s-article-actions .s-article-actions-left .s-article-actions-comment .h4 {
+  margin-left: 4px;
   color: var(--grey1);
 }
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container .s-more-from-writer-content .s-article-from-writer .s-article-information .s-article-actions .s-article-actions-right,
@@ -1089,21 +1061,15 @@ body .h5.bold {
   gap: 24px;
   align-items: center;
 }
-#s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-link a,
-#s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-link a {
+#s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-link .all-from-author,
+#s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-link .all-from-author {
   font-size: 14px;
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 999px;
   border: 1px solid var(--button-black);
   color: var(--button-black);
-}
-@media (min-width: 390px) {
-  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-link a,
-  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-link a {
-    display: flex;
-    width: 100%;
-  }
+  background-color: var(--white);
 }
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer.new-section .s-lists,
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer.new-section .s-lists {
@@ -1120,6 +1086,7 @@ body .h5.bold {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
+  margin-bottom: 56px;
 }
 @media (min-width: 768px) {
   #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer.new-section .s-lists .s-list-container .s-list-content-container,
@@ -1127,7 +1094,9 @@ body .h5.bold {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr;
-    gap: 16px;
+    gap: 32px;
+    border-bottom: 1px solid var(--grey4);
+    padding-bottom: 56px;
   }
 }
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer.new-section .s-lists .s-list-container .s-list-content-container .s-list-content-images,
@@ -1202,13 +1171,14 @@ body .h5.bold {
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer.new-section .s-lists .s-list-container .s-list-content-text {
   margin-left: 8px;
 }
-#s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer.new-section .s-lists .s-list-container .s-list-content-text .h3.medium,
-#s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer.new-section .s-lists .s-list-container .s-list-content-text .h3.medium {
+#s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer.new-section .s-lists .s-list-container .s-list-content-text .h3,
+#s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer.new-section .s-lists .s-list-container .s-list-content-text .h3 {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
+  margin: 0;
 }
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer.new-section .s-lists .s-list-container .s-list-content-text .h4,
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer.new-section .s-lists .s-list-container .s-list-content-text .h4 {
@@ -1216,6 +1186,10 @@ body .h5.bold {
   gap: 8px;
   color: var(--grey1);
   margin-top: 4px;
+}
+#s-footer .s-footer-container .s-more-from-writer-outer-container .divider {
+  border: 0.8px solid var(--grey4);
+  margin: 96px 0 88px 0;
 }
 
 #h-website-home {
