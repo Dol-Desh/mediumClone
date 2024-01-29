@@ -49,7 +49,7 @@ body .home-heading.regular {
 }
 body .heading {
   color: var(--deep-black);
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 400;
   line-height: 38px;
   font-family: "Helvetica Neue", sans-serif;
@@ -751,19 +751,15 @@ body .h5.bold {
   margin: 0 auto;
   width: 100%;
 }
-@media (min-width: 390px) {
-  #s-body-container #s-article {
-    margin: 0px 24px;
-  }
-}
-@media (min-width: 768px) {
-  #s-body-container #s-article {
-    margin: 0px 24px;
-  }
+#s-body-container #s-article {
+  margin: 0px 24px;
 }
 #s-body-container #s-article .s-article-container .s-article-heading {
   background-color: var(--misc-lightGreen);
   margin-top: 24px;
+}
+#s-body-container #s-article .s-article-container .s-article-heading .heading.bold {
+  font-size: clamp(1.875rem, 3vw, 2.5rem);
 }
 #s-body-container #s-article .s-article-container .s-writer-details {
   display: flex;
@@ -773,7 +769,7 @@ body .h5.bold {
   display: flex;
   gap: 8px;
   align-items: center;
-  margin: 24px 0px 24px 0px;
+  margin: 32px 0px 32px 0px;
 }
 #s-body-container #s-article .s-article-container .s-writer-details .s-writer-profile img {
   height: 44px;
@@ -796,6 +792,9 @@ body .h5.bold {
 #s-body-container #s-article .s-article-container .s-writer-details .s-writer-profile .s-writer-name-duration .s-writer-name .h3 .follow-writer {
   color: var(--button-green);
 }
+#s-body-container #s-article .s-article-container .s-writer-details .s-writer-profile .s-writer-name-duration .s-writer-name .h3 .follow-writer:hover {
+  text-decoration: underline;
+}
 #s-body-container #s-article .s-article-container .s-writer-details .s-writer-profile .s-writer-name-duration .s-article-duration .h4 {
   color: var(--grey1);
   display: flex;
@@ -807,23 +806,18 @@ body .h5.bold {
   justify-content: space-between;
 }
 #s-body-container #s-article .s-article-container .s-article-buttons .s-article-buttons-left {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  border-top: 1px solid var(--grey4);
-  border-bottom: 1px solid var(--grey4);
-  padding: 12px 8px;
-  margin-bottom: 32px;
+  display: none;
 }
 @media (min-width: 768px) {
   #s-body-container #s-article .s-article-container .s-article-buttons .s-article-buttons-left {
-    display: none;
-  }
-}
-@media (min-width: 390px) {
-  #s-body-container #s-article .s-article-container .s-article-buttons .s-article-buttons-left {
-    display: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    border-top: 1px solid var(--grey4);
+    border-bottom: 1px solid var(--grey4);
+    padding: 12px 8px;
+    margin-bottom: 32px;
   }
 }
 #s-body-container #s-article .s-article-container .s-article-buttons .s-article-buttons-left .s-article-buttons-left-toggle {
@@ -863,7 +857,7 @@ body .h5.bold {
   gap: 8px;
   margin-bottom: 32px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   #s-body-container #s-article .s-article-container .s-article-buttons-right {
     display: none;
   }
@@ -1271,21 +1265,21 @@ body .h5.bold {
 #h-website-home .modal .modal-container {
   background-color: var(--white);
   display: flex;
-  max-height: 100%;
   flex-direction: column;
   position: absolute;
-  top: 12%;
-  left: 24%;
-  max-width: 678px;
+  border-radius: 4px;
   box-shadow: 0px 26px 80px 0px rgba(0, 0, 0, 0.2), 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
 }
 @media (min-width: 768px) {
   #h-website-home .modal .modal-container {
+    margin: 0 auto;
     top: 12%;
     left: 30%;
+    max-width: 678px;
   }
 }
-#h-website-home .modal .modal-container #sign-up-close, #h-website-home .modal .modal-container #sign-in-close {
+#h-website-home .modal .modal-container #sign-up-close,
+#h-website-home .modal .modal-container #sign-in-close {
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
@@ -1362,6 +1356,12 @@ body .h5.bold {
 #h-website-home .modal .modal-container .get-started-content .h4 span:hover {
   text-decoration: none;
 }
+#h-website-home .modal .modal-container .get-started-content .h4.sign-in-h4 {
+  margin-top: 0;
+}
+#h-website-home .modal .modal-container .get-started-content .h4.sign-in-h4.middle-h4 {
+  margin: 56px 0px 40px 0px;
+}
 #h-website-home .h-content-text {
   display: flex;
   position: relative;
@@ -1374,6 +1374,9 @@ body .h5.bold {
     padding: 0px 48px;
     height: 462px;
   }
+}
+#h-website-home .h-content-text .h-content-container {
+  width: 100%;
 }
 @media (min-width: 768px) {
   #h-website-home .h-content-text .h-content-container {

@@ -1,21 +1,3 @@
-// //Javascript code for changing the style of each tab
-// const allTabs = document.querySelectorAll(".tab-button");
-// const allArticle = document.querySelectorAll(".article-list");
-
-// allTabs.forEach((tab, index) =>{
-
-//     tab.addEventListener("click", (e)=>{
-
-//         allTabs.forEach(tab=>{
-//             tab.classList.remove("active-tab");});
-//         tab.classList.add("active-tab");
-//     })
-
-//     allArticle.forEach(content =>{
-//         content.classList.remove("active");
-//     });
-//     // allArticle[index].classList.add("active");
-// })
 
 //Function for all all modals
 function setupModal( modalId, openModalId, closeModalId, sourceID, destinationID) 
@@ -55,7 +37,7 @@ function setupModal( modalId, openModalId, closeModalId, sourceID, destinationID
 setupModal("sign-up-modal", "get-started-menu", "sign-up-close", "sign-in-button", "sign-in-modal");
 setupModal("sign-in-modal", "sign-in-button", "sign-in-close", "sign-up-button", "sign-up-modal");
 
-// //Javascript code for changing the contents of tabs as the tab changes
+//Javascript code for changing the contents of tabs as the tab changes
 const allTabs = document.querySelectorAll(".tab-button");
 const allArticles = document.querySelectorAll(".article-list");
 
@@ -83,7 +65,7 @@ function myFunction() {
   document.getElementById("moreMenuDropdown").classList.toggle("show");
 }
 
-//dropdown code
+//Dropdown code
 window.onclick = function (event) {
   if (!event.target.matches(".more-icon")) {
     var dropdowns = document.getElementsByClassName("more-menu-wrap");
@@ -97,15 +79,3 @@ window.onclick = function (event) {
   }
 };
 
-//sticky headr
-// const tabNavigation = document.getElementById("#tab-navigation");
-// const scrollWatcher = document.createElement("div");
-
-// scrollWatcher.setAttribute("data-scroll-watcher", "");
-// tabNavigation.before(scrollWatcher);
-
-// const navObserver = new IntersectionObserver((entries) => {
-//   tabNavigation.classList.toggle("sticking", !entries[0].isIntersecting);
-// }, {rootMargin: "200px 0px 0px 0px"});
-
-// navObserver.observe(scrollWatcher);

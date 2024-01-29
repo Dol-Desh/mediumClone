@@ -83,7 +83,7 @@ body {
 
     .heading {
         color: var(--deep-black);
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 400;
         line-height: 38px;
         font-family: 'Helvetica Neue', sans-serif;
@@ -923,19 +923,16 @@ body {
     width: 100%;
 
     #s-article {
-        @include respond(small) {
-            margin: 0px 24px;
-        }
-
-        @include respond(medium) {
-            margin: 0px 24px;
-        }
+        margin: 0px 24px;
 
         .s-article-container {
-
             .s-article-heading {
                 background-color: var(--misc-lightGreen);
                 margin-top: 24px;
+
+                .heading.bold {
+                    font-size: clamp(1.875rem, 3vw, 2.5rem);
+                }
             }
 
             .s-writer-details {
@@ -946,7 +943,7 @@ body {
                     display: flex;
                     gap: 8px;
                     align-items: center;
-                    margin: 24px 0px 24px 0px;
+                    margin: 32px 0px 32px 0px;
 
                     img {
                         height: 44px;
@@ -971,6 +968,10 @@ body {
                                 .follow-writer {
                                     color: var(--button-green);
                                 }
+
+                                .follow-writer:hover{
+                                    text-decoration: underline;
+                                }
                             }
                         }
 
@@ -991,21 +992,17 @@ body {
                 justify-content: space-between;
 
                 .s-article-buttons-left {
-                    display: flex;
-                    align-items: center;
-                    flex-direction: row;
-                    width: 100%;
-                    border-top: 1px solid var(--grey4);
-                    border-bottom: 1px solid var(--grey4);
-                    padding: 12px 8px;
-                    margin-bottom: 32px;
+                    display: none;
 
                     @include respond(medium) {
-                        display: none;
-                    }
-
-                    @include respond(small) {
-                        display: none;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        width: 100%;
+                        border-top: 1px solid var(--grey4);
+                        border-bottom: 1px solid var(--grey4);
+                        padding: 12px 8px;
+                        margin-bottom: 32px;
                     }
 
                     .s-article-buttons-left-toggle {
@@ -1054,7 +1051,7 @@ body {
                 gap: 8px;
                 margin-bottom: 32px;
 
-                @include respond(large) {
+                @include respond(medium) {
                     display: none;
                 }
 
@@ -1490,21 +1487,20 @@ body {
         .modal-container {
             background-color: var(--white);
             display: flex;
-            max-height: 100%;
             flex-direction: column;
             position: absolute;
-            top: 12%;
-            left: 24%;
-            max-width: 678px;
+            border-radius: 4px;
             box-shadow: 0px 26px 80px 0px rgba(0, 0, 0, 0.20), 0px 0px 1px 0px rgba(0, 0, 0, 0.20);
 
             @include respond(medium) {
-                // margin: 0 auto;
+                margin: 0 auto;
                 top: 12%;
                 left: 30%;
+                max-width: 678px;
             }
 
-            #sign-up-close, #sign-in-close {
+            #sign-up-close,
+            #sign-in-close {
                 display: flex;
                 justify-content: flex-end;
                 cursor: pointer;
@@ -1572,7 +1568,7 @@ body {
                         cursor: pointer;
                     }
 
-                    span:hover{
+                    span:hover {
                         text-decoration: underline;
                     }
                 }
@@ -1586,8 +1582,16 @@ body {
                         text-decoration: underline;
                     }
 
-                    span:hover{
+                    span:hover {
                         text-decoration: none;
+                    }
+
+                    &.sign-in-h4 {
+                        margin-top: 0;
+
+                        &.middle-h4 {
+                            margin: 56px 0px 40px 0px;
+                        }
                     }
                 }
             }
@@ -1607,6 +1611,8 @@ body {
         }
 
         .h-content-container {
+            width: 100%;
+
             @include respond(medium) {
                 width: 432px;
             }
@@ -2047,6 +2053,7 @@ body {
 }
 
 #h-footer {
+
     .h-footer-container {
         margin: 0 auto;
         max-width: 1192px;
