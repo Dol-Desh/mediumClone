@@ -904,10 +904,15 @@ body .h5.bold {
 
 #s-footer {
   background-color: var(--grey3);
-  padding: 72px 0px;
+  padding: 72px 0 64px 0;
+}
+@media (min-width: 768px) {
+  #s-footer {
+    padding: 72px 0 0 0;
+  }
 }
 #s-footer .s-footer-container .s-writer-profile-container {
-  padding: 0px 24px;
+  padding: 0 24px;
 }
 #s-footer .s-footer-container .s-writer-profile-container .s-writer-profile {
   max-width: 680px;
@@ -955,6 +960,12 @@ body .h5.bold {
   margin: 0 auto;
   padding: 0px 24px;
 }
+@media (min-width: 768px) {
+  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer,
+  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer {
+    padding: 0;
+  }
+}
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .h3,
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .h3 {
   margin: 40px 0px 32px 0px;
@@ -976,6 +987,16 @@ body .h5.bold {
   #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-from-writer-container {
     grid-template-columns: 1fr 1fr;
     border-bottom: 1px solid var(--grey4);
+  }
+}
+#s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container .s-more-from-writer-content,
+#s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-from-writer-container .s-more-from-writer-content {
+  border-bottom: 1px solid var(--grey4);
+}
+@media (min-width: 768px) {
+  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container .s-more-from-writer-content,
+  #s-footer .s-footer-container .s-more-from-writer-outer-container .s-recommended-from-writer .s-more-from-writer-container .s-more-from-writer-content {
+    border-bottom: none;
   }
 }
 #s-footer .s-footer-container .s-more-from-writer-outer-container .s-more-from-writer .s-more-from-writer-container .s-more-from-writer-content .img,
@@ -1190,6 +1211,29 @@ body .h5.bold {
 #s-footer .s-footer-container .s-more-from-writer-outer-container .divider {
   border: 0.8px solid var(--grey4);
   margin: 96px 0 88px 0;
+}
+#s-footer .s-footer-links {
+  display: none;
+  border-top: 1px solid var(--grey4);
+  margin-top: 112px;
+}
+@media (min-width: 768px) {
+  #s-footer .s-footer-links {
+    display: block;
+    padding: 0;
+  }
+}
+#s-footer .s-footer-links .footer-links-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 24px;
+}
+#s-footer .s-footer-links .footer-links-list .h4 {
+  list-style: none;
+  margin: 0px 24px 8px 0px;
+  color: var(--grey1);
 }
 
 #h-website-home {
