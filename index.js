@@ -1,7 +1,11 @@
-
 //Function for all all modals
-function setupModal( modalId, openModalId, closeModalId, sourceID, destinationID) 
-{
+function setupModal(
+modalId,
+  openModalId,
+  closeModalId,
+  sourceID,
+  destinationID
+) {
   const modal = document.getElementById(modalId);
   const openModal = document.getElementById(openModalId);
   const closeModal = document.getElementById(closeModalId);
@@ -61,21 +65,22 @@ allTabs.forEach((tab, index) => {
   });
 });
 
-function myFunction() {
-  document.getElementById("moreMenuDropdown").classList.toggle("show");
-}
+//dropdown code
+document.addEventListener("click", function (event) {
+  var dropdowns = document.getElementsByClassName("dropdown-content");
 
-//Dropdown code
-window.onclick = function (event) {
-  if (!event.target.matches(".more-icon")) {
-    var dropdowns = document.getElementsByClassName("more-menu-wrap");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
-    }
+  // Close all dropdowns by default
+  for (var i = 0; i < dropdowns.length; i++) {
+    dropdowns[i].classList.remove("show");
   }
-};
+
+  if (event.target.matches(".dropdown-trigger")) {
+    // Find the corresponding dropdown
+    var clickedIcon = event.target;
+    var dropdown = clickedIcon.nextElementSibling;
+
+    // Toggle the "show" class for the clicked dropdown
+    dropdown.classList.toggle("show");
+  }
+});
 

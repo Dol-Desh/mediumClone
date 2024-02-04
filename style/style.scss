@@ -251,7 +251,11 @@ body {
             .account {
                 position: relative;
 
-                .account-menu-wrap {
+                .dropdown-trigger:hover {
+                    cursor: pointer;
+                }
+                
+                .dropdown-content {
                     display: none;
                     position: absolute;
                     top: 100%;
@@ -261,7 +265,7 @@ body {
                     max-height: 741px;
                     overflow-y: auto;
 
-                    .account-menu {
+                    .dropdown-menu {
                         background: var(--white);
                         padding-top: 16px;
                         border: 1px solid var(--divider);
@@ -578,11 +582,11 @@ body {
                                             position: relative;
                                             display: inline-block;
 
-                                            .more-icon:hover {
+                                            .dropdown-trigger:hover {
                                                 cursor: pointer;
                                             }
 
-                                            .more-menu-wrap {
+                                            .dropdown-content {
                                                 display: none;
                                                 position: absolute;
                                                 top: 100%;
@@ -590,7 +594,7 @@ body {
                                                 width: 200px;
                                                 z-index: 1;
 
-                                                .more-menu {
+                                                .dropdown-menu {
                                                     width: 100%;
                                                     background: var(--white);
                                                     padding: 8px 12px;
