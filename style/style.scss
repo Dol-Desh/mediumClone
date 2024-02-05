@@ -254,7 +254,7 @@ body {
                 .dropdown-trigger:hover {
                     cursor: pointer;
                 }
-                
+
                 .dropdown-content {
                     display: none;
                     position: absolute;
@@ -424,13 +424,11 @@ body {
             #tab-navigation {
                 display: flex;
                 align-items: center;
-
                 background-color: var(--white);
 
                 .navigation-content {
                     border-bottom: 1px solid var(--divider);
                     display: flex;
-                    padding-bottom: 16px;
                     overflow-x: scroll;
                     width: 100%;
 
@@ -444,13 +442,15 @@ body {
                         display: flex;
                         width: 100%;
                         overflow-x: scroll;
+                        position: relative;
+                        padding-bottom: 16px;
+
 
                         &::-webkit-scrollbar {
                             display: none;
                         }
 
                         -ms-overflow-style: none;
-                        // scrollbar-width: none;
 
                         .tab-button {
                             border: none;
@@ -465,6 +465,16 @@ body {
                                 color: var(--deep-black);
                                 font-weight: 700;
                             }
+                        }
+
+                        .line {
+                            position: absolute;
+                            top: 50px;
+                            left: 0px;
+                            width: 67px;
+                            height: 2px;
+                            background-color: var(--deep-black);
+                            transition: all 0.15s ease-out;
                         }
                     }
                 }
@@ -1106,7 +1116,7 @@ body {
     background-color: var(--grey3);
     padding: 72px 0 64px 0;
 
-    @include respond(medium){
+    @include respond(medium) {
         padding: 72px 0 0 0;
     }
 
@@ -1175,7 +1185,7 @@ body {
                 margin: 0 auto;
                 padding: 0px 24px;
 
-                @include respond(medium){
+                @include respond(medium) {
                     padding: 0;
                 }
 
@@ -1202,7 +1212,7 @@ body {
                     .s-more-from-writer-content {
                         border-bottom: 1px solid var(--grey4);
 
-                        @include respond(medium){
+                        @include respond(medium) {
                             border-bottom: none;
                         }
 
@@ -1438,7 +1448,7 @@ body {
         border-top: 1px solid var(--grey4);
         margin-top: 112px;
 
-        @include respond(medium){
+        @include respond(medium) {
             display: block;
             padding: 0;
         }
@@ -1449,7 +1459,7 @@ body {
             max-width: 680px;
             margin: 0 auto;
             padding: 24px 24px;
-            
+
 
             .h4 {
                 list-style: none;

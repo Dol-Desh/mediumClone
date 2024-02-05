@@ -1,11 +1,5 @@
 //Function for all all modals
-function setupModal(
-modalId,
-  openModalId,
-  closeModalId,
-  sourceID,
-  destinationID
-) {
+function setupModal(modalId, openModalId, closeModalId, sourceID, destinationID) {
   const modal = document.getElementById(modalId);
   const openModal = document.getElementById(openModalId);
   const closeModal = document.getElementById(closeModalId);
@@ -54,6 +48,11 @@ allTabs.forEach((tab, index) => {
 
     // Add "active-tab" class to the clicked tab
     tab.classList.add("active-tab");
+
+    // Add a line underneath each tab
+    var line = document.querySelector(".line");
+    line.style.width = e.target.offsetWidth + "px";
+    line.style.left = e.target.offsetLeft + "px";
 
     // Hide all articles
     allArticles.forEach((article) => {

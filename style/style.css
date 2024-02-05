@@ -351,7 +351,6 @@ body .h5.bold {
 #main-section #sections #left-section #tab-navigation .navigation-content {
   border-bottom: 1px solid var(--divider);
   display: flex;
-  padding-bottom: 16px;
   overflow-x: scroll;
   width: 100%;
 }
@@ -364,6 +363,8 @@ body .h5.bold {
   display: flex;
   width: 100%;
   overflow-x: scroll;
+  position: relative;
+  padding-bottom: 16px;
   -ms-overflow-style: none;
 }
 #main-section #sections #left-section #tab-navigation .navigation-content .tab-container::-webkit-scrollbar {
@@ -381,6 +382,15 @@ body .h5.bold {
 #main-section #sections #left-section #tab-navigation .navigation-content .tab-container .tab-button.active-tab {
   color: var(--deep-black);
   font-weight: 700;
+}
+#main-section #sections #left-section #tab-navigation .navigation-content .tab-container .line {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 67px;
+  height: 2px;
+  background-color: var(--deep-black);
+  transition: all 0.15s ease-out;
 }
 #main-section #sections #left-section .article-list:not(.active) {
   display: none;
