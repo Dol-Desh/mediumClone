@@ -4,6 +4,52 @@
     box-sizing: border-box;
     font-family: 'Georgia', sans-serif;
     font-family: 'Helvetica', sans-serif;
+
+    .article-actions {
+        display: flex;
+        gap: 16px;
+
+        .more-action-container {
+            position: relative;
+            display: inline-block;
+
+            .dropdown-trigger:hover {
+                cursor: pointer;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 10%;
+                width: 200px;
+                z-index: 1;
+
+                .dropdown-menu {
+                    width: 100%;
+                    background: var(--white);
+                    padding: 8px 12px;
+                    border: 1px solid var(--divider);
+                    border-radius: 8px;
+                    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(0, 0, 0, 0.20);
+
+                    .h4 {
+                        color: var(--grey1);
+                        padding: 8px 4px;
+                    }
+
+                    .h4:hover {
+                        font-weight: 700;
+                        color: var(--deep-black);
+                    }
+                }
+            }
+
+            .show {
+                display: block;
+            }
+        }
+    }
 }
 
 //bold
@@ -425,6 +471,10 @@ body {
                 flex-basis: 70%;
             }
 
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
             #tab-navigation {
                 display: flex;
                 align-items: center;
@@ -527,6 +577,9 @@ body {
                         display: flex;
 
                         .article-content {
+                            display: flex;
+                            margin-right: 32px;
+
                             .article-body {
                                 .article-title-container {
                                     display: flex;
@@ -589,70 +642,39 @@ body {
                                         }
                                     }
 
-                                    .article-actions {
-                                        display: flex;
-                                        gap: 16px;
-
-                                        .more-action-container {
-                                            position: relative;
-                                            display: inline-block;
-
-                                            .dropdown-trigger:hover {
-                                                cursor: pointer;
-                                            }
-
-                                            .dropdown-content {
-                                                display: none;
-                                                position: absolute;
-                                                top: 100%;
-                                                right: 10%;
-                                                width: 200px;
-                                                z-index: 1;
-
-                                                .dropdown-menu {
-                                                    width: 100%;
-                                                    background: var(--white);
-                                                    padding: 8px 12px;
-                                                    border: 1px solid var(--divider);
-                                                    border-radius: 8px;
-                                                    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(0, 0, 0, 0.20);
-
-                                                    .h4 {
-                                                        color: var(--grey1);
-                                                        padding: 8px 4px;
-                                                    }
-
-                                                    .h4:hover {
-                                                        font-weight: 700;
-                                                        color: var(--deep-black);
-                                                    }
-                                                }
-                                            }
-
-                                            .show {
-                                                display: block;
-                                            }
+                                    #smallScreen {
+                                        display: none;
+                                
+                                        @include respond(medium) {
+                                            display: flex;
                                         }
                                     }
                                 }
                             }
                         }
-                    }
 
-                    .article-image {
-                        width: clamp(100px, 3vw, 112px);
-                        height: clamp(64px, 3vw, 112px);
-                        img {
-                            display: none;
-
-                            @include respond(small) {
-                                display: inline-flex;
+                        .article-image {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                            width: 100%;
+                            margin-bottom: 32px;
+                            margin-left: 0;
+    
+                            .image-hw {
+                                display: block;
                                 width: clamp(100px, 3vw, 112px);
                                 height: clamp(64px, 3vw, 112px);
-                                // width: 112px;
-                                // height: 112px;
-                                margin-left: 32px;
                                 object-fit: cover;
+                            }
+
+                            #wideScreen {
+                                display: flex;
+        
+                                @include respond(medium){
+                                    display: none;
+                                }
                             }
                         }
                     }
