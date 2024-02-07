@@ -251,11 +251,11 @@ body {
             .account {
                 position: relative;
 
-                .dropdown-trigger:hover {
+                .dropdown-trigger2:hover {
                     cursor: pointer;
                 }
 
-                .dropdown-content {
+                .dropdown-content2 {
                     display: none;
                     position: absolute;
                     top: 100%;
@@ -380,6 +380,10 @@ body {
                         }
                     }
                 }
+
+                .show {
+                    display: block;
+                }
             }
         }
     }
@@ -434,8 +438,9 @@ body {
 
                     .new-article-button {
                         display: flex;
-                        align-items: center;
                         margin-right: 16px;
+                        height: 24px;
+                        margin-top: 8px;
                     }
 
                     .tab-container {
@@ -635,13 +640,17 @@ body {
                     }
 
                     .article-image {
+                        width: clamp(100px, 3vw, 112px);
+                        height: clamp(64px, 3vw, 112px);
                         img {
                             display: none;
 
                             @include respond(small) {
-                                display: block;
-                                width: 112px;
-                                height: 112px;
+                                display: inline-flex;
+                                width: clamp(100px, 3vw, 112px);
+                                height: clamp(64px, 3vw, 112px);
+                                // width: 112px;
+                                // height: 112px;
                                 margin-left: 32px;
                                 object-fit: cover;
                             }

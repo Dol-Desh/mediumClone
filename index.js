@@ -64,22 +64,24 @@ allTabs.forEach((tab, index) => {
   });
 });
 
-//dropdown code
-document.addEventListener("click", function (event) {
-  var dropdowns = document.getElementsByClassName("dropdown-content");
+// Dropdown code
+function dropdownList(dropdownClass, dropdownTrigger) {
+  const commonAncestor = document.documentElement;
 
-  // Close all dropdowns by default
-  for (var i = 0; i < dropdowns.length; i++) {
-    dropdowns[i].classList.remove("show");
-  }
+  commonAncestor.addEventListener("click", function (event) {
+    const target = event.target;
+    
+    if (target.matches(dropdownTrigger)) {
+      const dropdown = target.nextElementSibling;
+      dropdown.classList.toggle("show");
+    } else if (!target.closest("." + dropdownClass)) {
+      const dropdowns = document.querySelectorAll("." + dropdownClass);
+      dropdowns.forEach(function (dropdown) {
+        dropdown.classList.remove("show");
+      });
+    }
+  });
+}
 
-  if (event.target.matches(".dropdown-trigger")) {
-    // Find the corresponding dropdown
-    var clickedIcon = event.target;
-    var dropdown = clickedIcon.nextElementSibling;
-
-    // Toggle the "show" class for the clicked dropdown
-    dropdown.classList.toggle("show");
-  }
-});
-
+dropdownList("dropdown-content", ".dropdown-trigger");
+dropdownList("dropdown-content2", ".dropdown-trigger2");
