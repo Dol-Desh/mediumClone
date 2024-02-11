@@ -1,3 +1,5 @@
+
+
 //Function for all all modals
 function setupModal(modalId, openModalId, closeModalId, sourceID, destinationID) {
   const modal = document.getElementById(modalId);

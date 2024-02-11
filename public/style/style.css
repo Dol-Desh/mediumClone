@@ -1368,14 +1368,14 @@ body .h5.bold {
   display: flex;
   flex-wrap: wrap;
 }
-#h-website-home .modal .modal-container .get-started-content .sign-up-options {
+#h-website-home .modal .modal-container .get-started-content .sign-up-options, #h-website-home .modal .modal-container .get-started-content .sign-in-options {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 40px;
 }
-#h-website-home .modal .modal-container .get-started-content .sign-up-options .sign-up-method {
+#h-website-home .modal .modal-container .get-started-content .sign-up-options .sign-up-method, #h-website-home .modal .modal-container .get-started-content .sign-in-options .sign-up-method {
   width: 300px;
   display: flex;
   flex-wrap: wrap;
@@ -1387,8 +1387,9 @@ body .h5.bold {
   background-color: #fff;
   position: relative;
   cursor: pointer;
+  text-decoration: none;
 }
-#h-website-home .modal .modal-container .get-started-content .sign-up-options .sign-up-method img {
+#h-website-home .modal .modal-container .get-started-content .sign-up-options .sign-up-method img, #h-website-home .modal .modal-container .get-started-content .sign-in-options .sign-up-method img {
   width: 24px;
   height: 24px;
   left: 4px;

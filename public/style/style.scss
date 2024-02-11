@@ -1599,7 +1599,7 @@ body {
                     flex-wrap: wrap;
                 }
 
-                .sign-up-options {
+                .sign-up-options, .sign-in-options {
                     display: flex;
                     align-items: center;
                     flex-direction: column;
@@ -1618,6 +1618,7 @@ body {
                         background-color: #fff;
                         position: relative;
                         cursor: pointer;
+                        text-decoration: none;
 
                         img {
                             width: 24px;
