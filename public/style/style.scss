@@ -230,6 +230,10 @@ body {
         .left-container {
             display: flex;
 
+            .h3 {
+                margin-left: 16px;
+            }
+
             .search-wrapper {
                 display: none;
 
@@ -263,6 +267,15 @@ body {
         .top-nav-icons {
             display: flex;
             gap: 24px;
+            align-items: center;
+
+            .publish-btn {
+                padding: 8px 12px;
+                border-radius: 99px;
+                background-color: var(--button-green);
+                text-decoration: none;
+                color: var(--white);
+            }
 
             .edit {
                 display: none;
@@ -291,7 +304,76 @@ body {
             img {
                 height: 24px;
                 width: 24px;
-                // margin-left: 24px;
+            }
+
+            .dot-more {
+                position: relative;
+
+                .more-dropdown-trigger {
+                    cursor: pointer;
+                }
+
+                .dropdown-content3 {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    right: 10%;
+                    z-index: 1;
+                    width: 264px;
+                    max-height: 741px;
+                    overflow-y: auto;
+
+                    .dot-dropdown-menu {
+                        background: var(--white);
+                        padding-top: 8px;
+                        border: 1px solid var(--divider);
+                        border-radius: 8px;
+                        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(0, 0, 0, 0.20);
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+
+                        .dot-system-options {
+                            display: flex;
+                            flex-direction: column;
+                            border-bottom: 1px solid var(--divider);
+                            padding-bottom: 8px;
+
+                            .h4 {
+                                padding: 8px 24px;
+                                color: var(--grey1);
+                                cursor: pointer;
+                            }
+
+                            .h4:hover {
+                                font-weight: 700;
+                                color: var(--button-black);
+                            }
+                        }
+                        
+                        .dot-misc-options {
+                            display: flex;
+                            flex-direction: column;
+                            border-bottom: 1px solid var(--divider);
+                            padding-bottom: 8px;
+
+                            .h4 {
+                                padding: 8px 24px;
+                                color: var(--grey1);
+                                cursor: pointer;
+                            }
+
+                            .h4:hover {
+                                font-weight: 700;
+                                color: var(--button-black);
+                            }
+                        }
+                    }
+                }
+
+                .show {
+                    display: block;
+                }
             }
 
             .account {
@@ -644,7 +726,7 @@ body {
 
                                     #smallScreen {
                                         display: none;
-                                
+
                                         @include respond(medium) {
                                             display: flex;
                                         }
@@ -661,7 +743,7 @@ body {
                             width: 100%;
                             margin-bottom: 32px;
                             margin-left: 0;
-    
+
                             .image-hw {
                                 display: block;
                                 width: clamp(100px, 3vw, 112px);
@@ -671,8 +753,8 @@ body {
 
                             #wideScreen {
                                 display: flex;
-        
-                                @include respond(medium){
+
+                                @include respond(medium) {
                                     display: none;
                                 }
                             }
@@ -1599,7 +1681,8 @@ body {
                     flex-wrap: wrap;
                 }
 
-                .sign-up-options, .sign-in-options {
+                .sign-up-options,
+                .sign-in-options {
                     display: flex;
                     align-items: center;
                     flex-direction: column;

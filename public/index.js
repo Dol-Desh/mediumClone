@@ -87,3 +87,4 @@ function dropdownList(dropdownClass, dropdownTrigger) {
 
 dropdownList("dropdown-content", ".dropdown-trigger");
 dropdownList("dropdown-content2", ".dropdown-trigger2");
+dropdownList("dot-dropdown-content", ".more-dropdown-trigger");
