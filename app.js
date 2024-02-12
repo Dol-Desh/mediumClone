@@ -5,9 +5,15 @@ dotenv.config();
 import express from "express";
 import expressEjsLayouts from "express-ejs-layouts";
 import router from "./server/routes/main.js";
+import connectDB from "./server/config/db.js";
 
 const app = express();
 const port = 3000 || process.env.PORT; //process.env.port is used when you want to publish your project online
+
+
+//connect to db
+connectDB();
+
 app.use(express.static("public"));
 
 //templating engine
