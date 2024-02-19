@@ -350,7 +350,7 @@ body {
                                 color: var(--button-black);
                             }
                         }
-                        
+
                         .dot-misc-options {
                             display: flex;
                             flex-direction: column;
@@ -2263,5 +2263,27 @@ body {
                 height: 41px;
             }
         }
+    }
+}
+
+//write styling
+#write {
+
+    .write-title-wrapper {
+        input[type="search"] {
+            display: flex;
+            padding: 0rem 0.5rem;
+            border: none;
+            outline: none;
+            font-size: 1.75rem;
+            font-weight: 500;
+            color: var(--white);
+            width: 100%;
+        }
+    }
+
+    .h {
+        background-color: #1a8917;
+        padding: 16px;
     }
 }
