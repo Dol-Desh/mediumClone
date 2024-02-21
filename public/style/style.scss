@@ -2268,22 +2268,31 @@ body {
 
 //write styling
 #write {
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 100vh;
 
-    .write-title-wrapper {
-        input[type="search"] {
-            display: flex;
-            padding: 0rem 0.5rem;
-            border: none;
-            outline: none;
-            font-size: 1.75rem;
-            font-weight: 500;
-            color: var(--white);
-            width: 100%;
+    .write-section {
+        margin: 0px 20px;
+
+        .write-title-wrapper {
+            margin-top: 24px;
+
+            input[type="search"] {
+                display: flex;
+                padding: 0rem 0.5rem;
+                border: none;
+                outline: none;
+                font-size: 1.75rem;
+                font-weight: 500;
+                color: var(--black);
+                width: 100%;
+            }
         }
-    }
 
-    .h {
-        background-color: #1a8917;
-        padding: 16px;
+        .h {
+            background-color: #1a8917;
+            padding: 16px;
+        }
     }
 }
