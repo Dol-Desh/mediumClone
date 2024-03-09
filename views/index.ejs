@@ -293,34 +293,75 @@
                                         <!-- <img src="assets/akram-huseyn-fKC9eWRnlGY-unsplash.jpg" alt=""> -->
                                     </div>
                                     <div class="h-more-name">
-                                        <!-- <h4 class="h4">Mark Humphries</h4>
+                                        <h4 class="h4"><%=post.name%></h4>
                                         <img src="assets/book.svg" alt="">
-                                        <h4 class="h4 regular"><span class="location">in</span>The Spike</h4> -->
+                                        <h4 class="h4 regular"><span class="location">in</span><%=post.location%></h4>
                                     </div>
                                 </div>
 
                                 <div class="h-more-text">
-                                    <h3 class="h3 bold"> <%=post.title%></h3>
-                                    <h3 class="h3 body"> <%=post.body%></h3>
-                                    <!-- <div class="h-more-text-container">
+                                    <h3 class="h3 bold"><%=post.title%></h3>
+                                    <h3 class="h3 body"><%=post.body%></h3>
+                                    <div class="h-more-text-container">
                                         <div class="h-more-text-thumbnail">
-                                            <h4 class="h4">Dec 29<span class="dot separator1">·</span>6 min read<span
-                                                    class="dot separator2">·</span></h4>
-                                            <div class="h4 category">Psychology</div>
+                                            <h4 class="h4"><%=post.createdAt.toLocaleDateString('en-US', { month: 'short', day: '2-digit' })%><span class="dot separator1">·</span><%=post.duration%><span
+                                                class="dot separator2">·</span></h4>
+                                            <div class="h4 category"><%=post.category%></div>
                                             <img src="assets/star.svg" alt="">
                                         </div>
                                         <img src="assets/bookmark-01.svg" alt="">
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- <div class="h-more-image-outer-container">
+                        <div class="h-more-image-outer-container">
                             <div class="h-more-image">
                                 <img id="custom-img" src="assets/akram-huseyn-fKC9eWRnlGY-unsplash.jpg" alt="">
                             </div>
-                        </div> -->
+                        </div>
                     </div>
+
+                    <!-- Article 3 -->
+<div class="h-more-article-container">
+
+    <div class="h-more-outer-container">
+        <div class="h-more-container">
+            <div class="h-more-thumbnail">
+                <div class="h-more-article-image">
+                    <img src="assets/akram-huseyn-fKC9eWRnlGY-unsplash.jpg" alt="">
+                </div>
+                <div class="h-more-name">
+                    <h4 class="h4">Wikimedia</h4>
+                    <img src="assets/book.svg" alt="">
+                    <h4 class="h4 medium"><span class="location">in</span>Down the Rabbit Hole</h4>
+                </div>
+            </div>
+
+            <div class="h-more-text">
+                <h3 class="h3 bold">Birds, bugs, and beauty: The winners of Wiki
+                    Loves Earth 2023</h3>
+                <h3 class="h3 body">The world-spanning photo contest, now on its eleventh edition,
+                    has announced its newest winners.</h3>
+                <div class="h-more-text-container">
+                    <div class="h-more-text-thumbnail">
+                        <h4 class="h4">Dec 29<span class="dot separator1">·</span>6 min read<span
+                                class="dot separator2">·</span></h4>
+                        <div class="h4 category">Wikipedia</div>
+                        <img src="assets/star.svg" alt="">
+                    </div>
+                    <img src="assets/bookmark-01.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="h-more-image-outer-container">
+        <div class="h-more-image">
+            <img id="custom-img" src="assets/akram-huseyn-fKC9eWRnlGY-unsplash.jpg" alt="">
+        </div>
+    </div>
+</div>
 
                     <% }) %>
 

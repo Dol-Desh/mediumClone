@@ -3,6 +3,15 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
+
+    location: {
+        type: String,
+    },
+
     title: {
         type: String,
         required: true
@@ -16,6 +25,16 @@ const postSchema = new Schema({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+
+    duration: {
+        type: String,
+        required: true
+    },
+
+    category: {
+        type: String,
+        required: true
     },
 
     updatedAt: {
