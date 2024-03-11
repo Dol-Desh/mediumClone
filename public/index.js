@@ -1,5 +1,3 @@
-
-
 //Function for all all modals
 function setupModal(modalId, openModalId, closeModalId, sourceID, destinationID) {
   const modal = document.getElementById(modalId);
@@ -76,6 +74,7 @@ function dropdownList(dropdownClass, dropdownTrigger) {
     if (target.matches(dropdownTrigger)) {
       const dropdown = target.nextElementSibling;
       dropdown.classList.toggle("show");
+
     } else if (!target.closest("." + dropdownClass)) {
       const dropdowns = document.querySelectorAll("." + dropdownClass);
       dropdowns.forEach(function (dropdown) {

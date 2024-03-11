@@ -2032,6 +2032,8 @@ body {
                     align-items: center;
                     justify-content: space-between;
                     width: 100%;
+                    text-decoration: none;
+                    color: #000;
 
                     .h-more-outer-container {
                         display: flex;
@@ -2122,6 +2124,10 @@ body {
                                         flex-wrap: wrap;
                                         align-items: center;
                                         gap: 4px;
+
+                                        .bookmarkk{
+                                            cursor: pointer;
+                                        }
 
                                         .h4 {
                                             display: flex;

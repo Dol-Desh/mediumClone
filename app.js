@@ -14,6 +14,9 @@ const port = 3000 || process.env.PORT; //process.env.port is used when you want 
 //connect to db
 connectDB();
 
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+
 app.use(express.static("public"));
 
 //templating engine

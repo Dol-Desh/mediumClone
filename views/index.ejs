@@ -24,14 +24,18 @@
                     <h4 class="get-started-text">Join Medium.</h4>
 
                     <div class="sign-up-options">
-                        <button class="sign-up-method h3"><img src="assets/google.svg" alt="">Sign up with Google</button>
-                        <button class="sign-up-method h3"><img src="assets/facebook.svg" alt="">Sign up with Facebook</button>
+                        <button class="sign-up-method h3"><img src="assets/google.svg" alt="">Sign up with
+                            Google</button>
+                        <button class="sign-up-method h3"><img src="assets/facebook.svg" alt="">Sign up with
+                            Facebook</button>
                         <button class="sign-up-method h3"><img src="assets/gmail.svg" alt="">Sign up with Email</button>
                     </div>
 
                     <h3 class="h3">Already have an account? <span id="sign-in-button">Sign in</span></h3>
-                    <h4 class="h4">Click "Sign up" to agree to Medium's <span>Terms of Service</span> and acknowledge that Medium's
-                        <span>Privacy Policy</span> applies to you.</h4>
+                    <h4 class="h4">Click "Sign up" to agree to Medium's <span>Terms of Service</span> and acknowledge
+                        that Medium's
+                        <span>Privacy Policy</span> applies to you.
+                    </h4>
                 </div>
             </div>
         </dialog>
@@ -47,8 +51,10 @@
                     <h4 class="get-started-text">Welcome Back.</h4>
 
                     <div class="sign-in-options">
-                        <a href="/home" class="sign-up-method h3"><img src="assets/google.svg" alt="">Sign in with Google</a>
-                        <a href="/article" class="sign-up-method h3"><img src="assets/facebook.svg" alt="">Sign in with Facebook</a>
+                        <a href="/home" class="sign-up-method h3"><img src="assets/google.svg" alt="">Sign in with
+                            Google</a>
+                        <a href="/article" class="sign-up-method h3"><img src="assets/facebook.svg" alt="">Sign in with
+                            Facebook</a>
                         <a class="sign-up-method h3"><img src="assets/apple.svg" alt="">Sign in with Apple</a>
                         <a class="sign-up-method h3"><img src="assets/x.svg" alt="">Sign in with Twitter</a>
                         <a class="sign-up-method h3"><img src="assets/gmail.svg" alt="">Sign in with email</a>
@@ -56,8 +62,10 @@
 
                     <h3 class="h3">No account? <span id="sign-up-button">Create one</span></h3>
                     <h4 class="h4 sign-in-h4 middle-h4">Forgot email or trouble signing in? <span>Get help</span></h4>
-                    <h4 class="h4 sign-in-h4">Click "Sign up" to agree to Medium's <span>Terms of Service</span> and acknowledge that Medium's
-                        <span>Privacy Policy</span> applies to you.</h4>
+                    <h4 class="h4 sign-in-h4">Click "Sign up" to agree to Medium's <span>Terms of Service</span> and
+                        acknowledge that Medium's
+                        <span>Privacy Policy</span> applies to you.
+                    </h4>
                 </div>
             </div>
         </dialog>
@@ -281,95 +289,66 @@
 
                 <div class="h-more-article-list">
 
-                    <% data.forEach(post => { %>
+                    <% data.forEach(post=> { %>
 
-                    <!-- Article 1 -->
-                    <div class="h-more-article-container">
+                        <!-- Article 1 -->
+                        <a class="h-more-article-container" href="/article/<%=post._id%>">
 
-                        <div class="h-more-outer-container">
-                            <div class="h-more-container">
-                                <div class="h-more-thumbnail">
-                                    <div class="h-more-article-image">
-                                        <!-- <img src="assets/akram-huseyn-fKC9eWRnlGY-unsplash.jpg" alt=""> -->
-                                    </div>
-                                    <div class="h-more-name">
-                                        <h4 class="h4"><%=post.name%></h4>
-                                        <img src="assets/book.svg" alt="">
-                                        <h4 class="h4 regular"><span class="location">in</span><%=post.location%></h4>
-                                    </div>
-                                </div>
-
-                                <div class="h-more-text">
-                                    <h3 class="h3 bold"><%=post.title%></h3>
-                                    <h3 class="h3 body"><%=post.body%></h3>
-                                    <div class="h-more-text-container">
-                                        <div class="h-more-text-thumbnail">
-                                            <h4 class="h4"><%=post.createdAt.toLocaleDateString('en-US', { month: 'short', day: '2-digit' })%><span class="dot separator1">·</span><%=post.duration%><span
-                                                class="dot separator2">·</span></h4>
-                                            <div class="h4 category"><%=post.category%></div>
-                                            <img src="assets/star.svg" alt="">
+                            <div class="h-more-outer-container">
+                                <div class="h-more-container">
+                                    <div class="h-more-thumbnail">
+                                        <div class="h-more-article-image">
+                                            <img src="assets/akram-huseyn-fKC9eWRnlGY-unsplash.jpg" alt="">
                                         </div>
-                                        <img src="assets/bookmark-01.svg" alt="">
+                                        <div class="h-more-name">
+                                            <h4 class="h4">
+                                                <%=post.name%>
+                                            </h4>
+                                            <img src="assets/book.svg" alt="">
+                                            <h4 class="h4 regular"><span class="location">in</span>
+                                                <%=post.location%>
+                                            </h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="h-more-text">
+                                        <h3 class="h3 bold">
+                                            <%=post.title%>
+                                        </h3>
+                                        <h3 class="h3 body">
+                                            <%=post.body%>
+                                        </h3>
+                                        <div class="h-more-text-container">
+                                            <div class="h-more-text-thumbnail">
+                                                <h4 class="h4"><%=post.createdAt.toLocaleDateString('en-US', {
+                                                        month: 'short' , day: '2-digit' })%><span
+                                                            class="dot separator1">·</span>
+                                                        <%=post.duration%><span class="dot separator2">·</span></h4>
+                                                <div class="h4 category">
+                                                    <%=post.category%>
+                                                </div>
+                                                <img src="assets/star.svg" alt="">
+                                            </div>
+                                            <img class="bookmarkk" src="assets/bookmark-01.svg" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="h-more-image-outer-container">
-                            <div class="h-more-image">
-                                <img id="custom-img" src="assets/akram-huseyn-fKC9eWRnlGY-unsplash.jpg" alt="">
+                            <div class="h-more-image-outer-container">
+                                <div class="h-more-image">
+                                    <img id="custom-img" src="assets/akram-huseyn-fKC9eWRnlGY-unsplash.jpg" alt="">
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </a>
 
-                    <!-- Article 3 -->
-<div class="h-more-article-container">
+                        <% }) %>
 
-    <div class="h-more-outer-container">
-        <div class="h-more-container">
-            <div class="h-more-thumbnail">
-                <div class="h-more-article-image">
-                    <img src="assets/akram-huseyn-fKC9eWRnlGY-unsplash.jpg" alt="">
-                </div>
-                <div class="h-more-name">
-                    <h4 class="h4">Wikimedia</h4>
-                    <img src="assets/book.svg" alt="">
-                    <h4 class="h4 medium"><span class="location">in</span>Down the Rabbit Hole</h4>
-                </div>
-            </div>
-
-            <div class="h-more-text">
-                <h3 class="h3 bold">Birds, bugs, and beauty: The winners of Wiki
-                    Loves Earth 2023</h3>
-                <h3 class="h3 body">The world-spanning photo contest, now on its eleventh edition,
-                    has announced its newest winners.</h3>
-                <div class="h-more-text-container">
-                    <div class="h-more-text-thumbnail">
-                        <h4 class="h4">Dec 29<span class="dot separator1">·</span>6 min read<span
-                                class="dot separator2">·</span></h4>
-                        <div class="h4 category">Wikipedia</div>
-                        <img src="assets/star.svg" alt="">
-                    </div>
-                    <img src="assets/bookmark-01.svg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="h-more-image-outer-container">
-        <div class="h-more-image">
-            <img id="custom-img" src="assets/akram-huseyn-fKC9eWRnlGY-unsplash.jpg" alt="">
-        </div>
-    </div>
-</div>
-
-                    <% }) %>
-
-                    <div class="h-load-more-button-container">
-                        <div class="h-load-more-button">
-                            <h4 class="h4">Load more stories</h4>
-                        </div>
-                    </div>
+                            <div class="h-load-more-button-container">
+                                <div class="h-load-more-button">
+                                    <h4 class="h4">Load more stories</h4>
+                                </div>
+                            </div>
                 </div>
             </div>
         </div>

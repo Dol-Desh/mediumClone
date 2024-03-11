@@ -9,10 +9,10 @@
         <div class="left-container">
             <img src="assets/logo.svg" alt="website-logo">
 
-            <div class="search-wrapper">
+            <form action="/search" method="POST" class="search-wrapper" role="search">
                 <img src="assets/search-sm.svg" alt="">
-                <input type="search" name="search" id="search" class="h4" placeholder="Search..">
-            </div>
+                <input type="search" aria-label="Search" name="searchTerm" id="searchInput" class="h4" placeholder="Search..">
+            </form>
         </div>
 
         <div class="top-nav-icons">

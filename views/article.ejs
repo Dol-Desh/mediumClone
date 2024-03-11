@@ -1,4 +1,6 @@
 <body>
+    <%- include('./partials/header.ejs') %>
+
     <div id="s-body-container">
 
         <section id="s-article">
@@ -6,13 +8,13 @@
             <div class="s-article-container">
 
                 <div class="s-article-heading">
-                    <h1 class="heading bold">Why having more sex can save your life.</h1>
+                    <h1 class="heading bold"><%=data.title%></h1>
                 </div>
 
                 <div class="s-writer-details">
 
                     <div class="s-writer-profile">
-                        <img src="assets/female-profile.jpg" alt="">
+                        <img src="/assets/female-profile.jpg" alt="">
 
                         <div class="s-writer-name-duration">
                             <div class="s-writer-name">
@@ -64,11 +66,7 @@
                 <div class="s-paragraphs">
                     <div class="s-first-paragraph">
                         <h2 class="h2 regular">
-                            Health relies on the autonomic nervous
-                            system, and a great way to stay
-                            autonomically healthy is SEX. I’ll teach you
-                            about the science of sex. In short, more is
-                            better!
+                            <%=data.body%>
                         </h2>
                         <img src="" alt="">
                     </div>

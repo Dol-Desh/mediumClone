@@ -40,6 +40,11 @@ const postSchema = new Schema({
     updatedAt: {
         type: Date,
         default: Date.now
+    },
+
+    articleImage: {
+        date: Buffer,
+        type: String
     }
 });
 

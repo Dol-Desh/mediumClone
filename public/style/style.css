@@ -1745,6 +1745,8 @@ body .h5.bold {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  text-decoration: none;
+  color: #000;
 }
 #h-main-home .h-other-article .h-other-article-outer-container .h-more-article-list .h-more-article-container .h-more-outer-container {
   display: flex;
@@ -1826,6 +1828,9 @@ body .h5.bold {
   flex-wrap: wrap;
   align-items: center;
   gap: 4px;
+}
+#h-main-home .h-other-article .h-other-article-outer-container .h-more-article-list .h-more-article-container .h-more-outer-container .h-more-container .h-more-text .h-more-text-container .h-more-text-thumbnail .bookmarkk {
+  cursor: pointer;
 }
 #h-main-home .h-other-article .h-other-article-outer-container .h-more-article-list .h-more-article-container .h-more-outer-container .h-more-container .h-more-text .h-more-text-container .h-more-text-thumbnail .h4 {
   display: flex;
