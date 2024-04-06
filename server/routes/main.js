@@ -34,8 +34,7 @@ router.get("/image", (req, res) => {
 });
 
 //article route
-//GET Post:id
-router.get("/article/:_id", async (req, res) => {
+router.get('/article/:id', async (req, res) => {
 
   try {
     let slug = req.params.id;
@@ -47,7 +46,7 @@ router.get("/article/:_id", async (req, res) => {
       title: data.title,
     };
 
-    res.render("index.ejs", { locals, data });
+    res.render("article.ejs", { locals, data });
   } catch (error) {
     console.log(error);
     res.status(500).send("Internal server error");
