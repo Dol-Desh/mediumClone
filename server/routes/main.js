@@ -35,19 +35,22 @@ router.get("/image", (req, res) => {
 
 //article route
 //GET Post:id
-router.get("/article/:id", async (req, res) => {
+router.get("/article/:_id", async (req, res) => {
 
   try {
     let slug = req.params.id;
     const data = await Post.findById({_id: slug});
 
+    console.log("Fetched data:", data); // Log the fetched data to the console
+
     const locals = {
       title: data.title,
     };
 
-    res.render("article.ejs", { locals, data });
+    res.render("index.ejs", { locals, data });
   } catch (error) {
     console.log(error);
+    res.status(500).send("Internal server error");
   }
 });
 

@@ -3,12 +3,14 @@
 
     <div id="s-body-container">
 
+        <% if (locals.data) {%>
+            
         <section id="s-article">
 
             <div class="s-article-container">
 
                 <div class="s-article-heading">
-                    <h1 class="heading bold"><%=data.title%></h1>
+                    <h1 class="heading bold"><%= data.title %> </h1>
                 </div>
 
                 <div class="s-writer-details">
@@ -141,6 +143,8 @@
 
             </div>
         </section>
+
+        <% }%>
     </div>
 
     <footer id="s-footer">
