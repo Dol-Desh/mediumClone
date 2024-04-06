@@ -44,6 +44,7 @@ router.get('/article/:id', async (req, res) => {
 
     const locals = {
       title: data.title,
+      data: data
     };
 
     res.render("article.ejs", { locals, data });
@@ -54,7 +55,6 @@ router.get('/article/:id', async (req, res) => {
 });
 
 //search route
-//POST searchTerm
 router.post("/search", async (req, res) => {
 
   try {

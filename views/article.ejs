@@ -20,11 +20,12 @@
 
                         <div class="s-writer-name-duration">
                             <div class="s-writer-name">
-                                <h3 class="h3">Sara Mednick <span class="dot-separator">·</span><span
+                                <h3 class="h3"><%=data.name%><span class="dot-separator">·</span><span
                                         class="follow-writer">Follow</span></h3>
                             </div>
                             <div class="s-article-duration">
-                                <h4 class="h4">9 min read<span>·</span><span class="date">Sep 21, 2022</span></h3>
+                                <h4 class="h4"><%=data.duration%><span>·</span><span class="date"><%=data.createdAt.toLocaleDateString('en-US', {
+                                    month: 'short' , day: '2-digit' })%></span></h3>
                             </div>
                         </div>
                     </div>
@@ -146,6 +147,7 @@
 
         <% }%>
     </div>
+
 
     <footer id="s-footer">
 
