@@ -7,7 +7,7 @@
 
                 <div id="left-section">
 
-                    <h2 id="results-header" class="heading bold">Results for</h2>
+                    <h2 id="results-header" class="heading bold">Results for <span class="returned-search-term"> <%= searchNoSpecialChar %> </span></h2>
 
                     <div id="tab-navigation">
 
@@ -36,7 +36,7 @@
 
                         <% data.forEach(post=> { %>
 
-                            <a class="h-more-article-container" href="/article/<%=post._id%>">
+                            <a id="article-link-indicator" href="/article/<%=post._id%>">
 
                                 <!-- Article 1-->
                                 <div class="article">
@@ -44,7 +44,7 @@
                                     <div class="article-header">
                                         <img class="article-writer-image" src="assets/female-profile.jpg"
                                             alt="writer-image">
-                                        <h4 class="h4">Sara_Mednick<span>· Sep 21, 2022</span></h4>
+                                        <h4 class="h4"><%= post.name %><span>· Sep 21, 2022</span></h4>
                                         <img src="assets/star.svg" alt="">
                                     </div>
 
@@ -54,16 +54,8 @@
                                             <div class="article-body">
                                                 <div class="article-title-container">
                                                     <div class="article-title">
-                                                        <h2 class="h2 bold">Why having more sex can save your life.</h2>
-                                                        <h3 class="h3">Health relies on the autonomic nervous system,
-                                                            and a
-                                                            great way to stay
-                                                            autonomically healthy is SEX. I’ll teach you about the
-                                                            science of
-                                                            sex. In
-                                                            short, more is better! After reading my most recent book, my
-                                                            friend…
-                                                        </h3>
+                                                        <h2 class="h2 bold"><%= post.title %></h2>
+                                                        <h3 class="h3"><%= post.body %></h3>
                                                     </div>
                                                 </div>
 

@@ -21,7 +21,7 @@ router.get("/home", async (req, res) => {
   const locals = {
     title: "nodeJS blog",
   };
-  
+
   try{
     const data = await Post.find();
     res.render("home.ejs", {locals, data});
@@ -79,6 +79,7 @@ router.post("/search", async (req, res) => {
 
     const data = await Post.find({
       $or: [
+        {name: { $regex: new RegExp(searchNoSpecialChar, "i") }},
         {title: { $regex: new RegExp(searchNoSpecialChar, "i") }},
         {body: { $regex: new RegExp(searchNoSpecialChar, "i") }}
       ]
