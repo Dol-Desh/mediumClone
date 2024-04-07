@@ -1,0 +1,342 @@
+<body>
+    <%- include('./partials/header.ejs') %>
+
+        <main id="main-section">
+
+            <section id="sections">
+
+                <div id="left-section">
+
+                    <h2 id="results-header" class="heading bold">Results for</h2>
+
+                    <div id="tab-navigation">
+
+                        <div class="navigation-content">
+
+                            <div class="new-article-button">
+                                <img src="assets/plus-circle.svg" alt="plus icon">
+                            </div>
+
+                            <div class="tab-container">
+                                <button class="tab-button h4 active-tab">For you</button>
+                                <button class="tab-button h4">Following</button>
+                                <button class="tab-button h4">Defi</button>
+                                <button class="tab-button h4">UI</button>
+                                <button class="tab-button h4">Creativity</button>
+                                <button class="tab-button h4">Wellness</button>
+                                <button class="tab-button h4">Career</button>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- For you -->
+                    <div class="article-list active">
+
+                        <% data.forEach(post=> { %>
+
+                            <a class="h-more-article-container" href="/article/<%=post._id%>">
+
+                                <!-- Article 1-->
+                                <div class="article">
+
+                                    <div class="article-header">
+                                        <img class="article-writer-image" src="assets/female-profile.jpg"
+                                            alt="writer-image">
+                                        <h4 class="h4">Sara_Mednick<span>· Sep 21, 2022</span></h4>
+                                        <img src="assets/star.svg" alt="">
+                                    </div>
+
+                                    <div class="article-content-body">
+
+                                        <div class="article-content">
+                                            <div class="article-body">
+                                                <div class="article-title-container">
+                                                    <div class="article-title">
+                                                        <h2 class="h2 bold">Why having more sex can save your life.</h2>
+                                                        <h3 class="h3">Health relies on the autonomic nervous system,
+                                                            and a
+                                                            great way to stay
+                                                            autonomically healthy is SEX. I’ll teach you about the
+                                                            science of
+                                                            sex. In
+                                                            short, more is better! After reading my most recent book, my
+                                                            friend…
+                                                        </h3>
+                                                    </div>
+                                                </div>
+
+                                                <div class="article-details">
+                                                    <div class="article-duration">
+                                                        <h4 class="h4"><span class="article-category">Sex</span>9 min
+                                                            read
+                                                            <span>·</span> Selected for you
+                                                        </h4>
+                                                    </div>
+
+                                                    <div id="smallScreen" class="article-actions">
+                                                        <div class="action-container">
+                                                            <img class="icon bookmark-icon"
+                                                                src="assets/bookmark-add.svg" alt="bookmark icon">
+                                                        </div>
+
+                                                        <div class="more-action-container">
+                                                            <img class="dropdown-trigger"
+                                                                src="assets/dots-horizontal.svg" alt="more icon">
+
+                                                            <div class="dropdown-content">
+                                                                <div class="dropdown-menu">
+                                                                    <h4 class="h4">Mute this author</h4>
+                                                                    <h4 class="h4">Mute this publication</h4>
+                                                                    <h4 class="h4">Report</h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="article-image">
+                                            <img class="image-hw" src="assets/naked-people.jpg" alt="article image">
+
+                                            <div id="wideScreen" class="article-actions">
+                                                <div class="action-container">
+                                                    <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
+                                                        alt="bookmark icon">
+                                                </div>
+
+                                                <div class="more-action-container">
+                                                    <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
+                                                        alt="more icon">
+
+                                                    <div class="dropdown-content">
+                                                        <div class="dropdown-menu">
+                                                            <h4 class="h4">Mute this author</h4>
+                                                            <h4 class="h4">Mute this publication</h4>
+                                                            <h4 class="h4">Report</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </a>
+
+                            <% }) %>
+                    </div>
+
+                    <!-- Following -->
+                    <div class="article-list">
+
+                    </div>
+
+                    <!-- Defi -->
+                    <div class="article-list">
+
+                    </div>
+
+                    <!-- UI -->
+                    <div class="article-list">
+
+
+                    </div>
+
+                    <!-- Creativity -->
+                    <div class="article-list">
+
+
+                    </div>
+
+                    <!-- Wellness -->
+                    <div class="article-list">
+
+
+                    </div>
+
+                    <!-- Career -->
+                    <div class="article-list">
+
+
+                    </div>
+
+                    <div id="right-section">
+
+                        <div class="staff-picks">
+                            <h3 class="h3 medium">Staff Picks</h3>
+
+                            <div class="staff-picked-article">
+                                <div class="picked-article-header">
+                                    <img class="profile-image" src="assets/female-profile.jpg" alt="writer-image">
+                                    <h4 class="h4">Mike Grindle<span class="locator">in</span> <span
+                                            class="location">ILLUMINATION</span></h4>
+                                    <img src="assets/star.svg" alt="">
+                                </div>
+
+                                <div>
+                                    <h3 class="h3 bold">Frutiger Aero: When the Future Looked
+                                        Optimistic</h3>
+                                </div>
+
+                            </div>
+
+                            <div class="staff-picked-article">
+                                <div class="picked-article-header">
+                                    <img class="profile-image" src="assets/female-profile.jpg" alt="writer-image">
+                                    <h4 class="h4">Jude Ellison<span class="locator">in</span> <span
+                                            class="location">The
+                                            memorist</span> </h4>
+                                    <img src="assets/shape-star.svg" alt="">
+                                </div>
+
+                                <div>
+                                    <h2 class="h2 bold">It’s the End of Feminist Media. Again.</h2>
+                                </div>
+
+                            </div>
+
+                            <div class="staff-picked-article">
+                                <div class="picked-article-header">
+                                    <img class="profile-image" src="assets/female-profile.jpg" alt="writer-image">
+                                    <h4 class="h4">Jane Elliot<span class="locator">in</span> <span
+                                            class="location">Pinterest
+                                            Design</span> </h4>
+                                    <img src="assets/star.svg" alt="">
+                                </div>
+
+                                <div>
+                                    <h2 class="h2 bold">The Trouble With Teachability</h2>
+                                </div>
+
+                            </div>
+
+                            <a class="h3" href="">See the full list</a>
+
+                        </div>
+
+                        <div class="misc-section">
+                            <div class="writing-on-medium">
+                                <div class="header">
+                                    <h3 class="h3 bold">Writing on Medium <img src="assets/x-close.svg" alt=""></h3>
+                                </div>
+
+                                <div class="links">
+                                    <h3 class="h3">New Writer FAQ</h3>
+                                    <h3 class="h3">Expert Writing Advice</h3>
+                                    <h3 class="h3">Grow your readership</h3>
+                                </div>
+
+                                <button class="btn">Start writing</button>
+
+                            </div>
+
+                            <div class="discover-writers">
+
+                                <div class="connection">
+                                    <img src="assets/logo.svg" alt="">
+                                    <img src="assets/plus.svg" alt="">
+                                    <img src="assets/twitter.svg" alt="">
+                                </div>
+
+                                <h3 class="h3">Discover Medium writers you already follow on Twitter.</h3>
+
+                                <button class="btn">Connect to Twitter</button>
+
+                                <a class="h3" href="">Maybe later</a>
+
+                            </div>
+
+                            <div class="recommended-topics">
+                                <h3 class="h3 bold">Recommended topics</h3>
+
+                                <ul class="recommended-lists">
+                                    <li>Programming</li>
+                                    <li>Data Science</li>
+                                    <li>Technology</li>
+                                    <li>Self Improvement</li>
+                                    <li>Writing</li>
+                                    <li>Relationships</li>
+                                    <li>Machine Learning</li>
+                                </ul>
+
+                                <a class="h3 link" href="">See more topics</a>
+                            </div>
+
+                            <div class="who-to-follow">
+                                <h3 class="h3 bold">Who to follow</h3>
+
+                                <div class="recommended-follow">
+                                    <div class="recommended-follow-profile"><img src="assets/greek_god.jpg" alt="">
+                                    </div>
+
+                                    <div class="name-title">
+                                        <h3 class="h3 bold">Dexa <img src="assets/shape-star.svg" alt=""></h3>
+                                        <h5 class="h4">A powerful decentralized
+                                            exchange based on BFIC…</h5>
+                                    </div>
+                                    <button class="follow-button">Follow</button>
+                                </div>
+
+                                <div class="recommended-follow">
+                                    <div class="recommended-follow-profile"><img src="assets/greek_god.jpg" alt="">
+                                    </div>
+
+                                    <div class="name-title">
+                                        <h3 class="h3 bold">Dexa <img src="assets/shape-star.svg" alt=""></h3>
+                                        <h5 class="h4">A powerful decentralized
+                                            exchange based on BFIC…</h5>
+                                    </div>
+                                    <button class="follow-button">Follow</button>
+                                </div>
+
+                                <div class="recommended-follow">
+                                    <div class="recommended-follow-profile"><img src="assets/greek_god.jpg" alt="">
+                                    </div>
+
+                                    <div class="name-title">
+                                        <h3 class="h3 bold">Dexa <img src="assets/shape-star.svg" alt=""></h3>
+                                        <h5 class="h4">A powerful decentralized
+                                            exchange based on BFIC…</h5>
+                                    </div>
+                                    <button class="follow-button">Follow</button>
+                                </div>
+
+                                <a class="h3" href="">See more suggestions</a>
+                            </div>
+
+                            <div class="reading-list">
+                                <h3 class="h3 bold">Reading list</h3>
+
+                                <div class="add-story">
+                                    <h4 class="h4">Click the <span><img src="assets/bookmark-add.svg" alt=""></span> on
+                                        any
+                                        story to easily add it to your</h4>
+                                    <h4 class="h4">reading list or a custom list that you can share.</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="left-section-footer">
+                            <ul class="list">
+                                <li class="h5">Help</li>
+                                <li class="h5">Status</li>
+                                <li class="h5">About</li>
+                                <li class="h5">Careers</li>
+                                <li class="h5">Blog</li>
+                                <li class="h5">Privacy</li>
+                                <li class="h5">Terms</li>
+                                <li class="h5">Text to speech</li>
+                                <li class="h5">Teams</li>
+                            </ul>
+                        </div>
+                    </div>
+            </section>
+        </main>
+
+        <script src="index.js"></script>
+</body>
+
+</html>

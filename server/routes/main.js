@@ -17,8 +17,18 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/home", (req, res) => {
-  res.render("home.ejs");
+router.get("/home", async (req, res) => {
+  const locals = {
+    title: "nodeJS blog",
+  };
+  
+  try{
+    const data = await Post.find();
+    res.render("home.ejs", {locals, data});
+  }
+  catch (error) {
+    console.log(error);
+  }
 });
 
 router.get("/article", (req, res) => {
@@ -63,17 +73,21 @@ router.post("/search", async (req, res) => {
     };
 
     let searchTerm = req.body.searchTerm;
+    console.log(searchTerm);
     const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9]/g, "");
-    const data = await Post.findById({
+
+
+    const data = await Post.find({
       $or: [
-        {title: {$regex: new RegExp(searchNoSpecialChar, "i")}},
-        {title: {$regex: new RegExp(searchNoSpecialChar, "i")}}
+        {title: { $regex: new RegExp(searchNoSpecialChar, "i") }},
+        {body: { $regex: new RegExp(searchNoSpecialChar, "i") }}
       ]
     });
 
-    res.render("search", {
+    res.render("search.ejs", {
       data,
-      locals
+      locals,
+      searchNoSpecialChar
     });
   } catch (error) {
     console.log(error);
