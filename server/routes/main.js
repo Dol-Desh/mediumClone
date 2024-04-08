@@ -22,11 +22,10 @@ router.get("/home", async (req, res) => {
     title: "nodeJS blog",
   };
 
-  try{
+  try {
     const data = await Post.find();
-    res.render("home.ejs", {locals, data});
-  }
-  catch (error) {
+    res.render("home.ejs", { locals, data });
+  } catch (error) {
     console.log(error);
   }
 });
@@ -44,17 +43,16 @@ router.get("/image", (req, res) => {
 });
 
 //article route
-router.get('/article/:id', async (req, res) => {
-
+router.get("/article/:id", async (req, res) => {
   try {
     let slug = req.params.id;
-    const data = await Post.findById({_id: slug});
+    const data = await Post.findById({ _id: slug });
 
     console.log("Fetched data:", data); // Log the fetched data to the console
 
     const locals = {
       title: data.title,
-      data: data
+      data: data,
     };
 
     res.render("article.ejs", { locals, data });
@@ -66,31 +64,38 @@ router.get('/article/:id', async (req, res) => {
 
 //search route
 router.post("/search", async (req, res) => {
-
   try {
     const locals = {
-      title: "Search"
+      title: "Search",
     };
 
     let searchTerm = req.body.searchTerm;
     const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9]/g, "");
 
+    //search by author name, title, body
     const data = await Post.find({
       $or: [
-        {name: { $regex: new RegExp(searchNoSpecialChar, "i") }},
-        {title: { $regex: new RegExp(searchNoSpecialChar, "i") }},
-        {body: { $regex: new RegExp(searchNoSpecialChar, "i") }}
-      ]
+        { name: { $regex: new RegExp(searchNoSpecialChar, "i") } },
+        { title: { $regex: new RegExp(searchNoSpecialChar, "i") } },
+        { body: { $regex: new RegExp(searchNoSpecialChar, "i") } },
+      ],
     });
+
+    //filter for the name of the author
+    const authorName = data.map(post => post.name).filter(name => name.toLowerCase().includes(searchNoSpecialChar.toLowerCase()));
 
     res.render("search.ejs", {
       data,
       locals,
-      searchNoSpecialChar
+      searchNoSpecialChar,
+      authorName
     });
+
   } catch (error) {
     console.log(error);
-    res.status(500).send(`No articles found for this for ${searchNoSpecialChar}.`)
+    res
+      .status(500)
+      .send(`No articles found for this for ${searchNoSpecialChar}.`);
   }
 });
 
