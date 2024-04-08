@@ -73,9 +73,7 @@ router.post("/search", async (req, res) => {
     };
 
     let searchTerm = req.body.searchTerm;
-    console.log(searchTerm);
     const searchNoSpecialChar = searchTerm.replace(/[^a-zA-Z0-9]/g, "");
-
 
     const data = await Post.find({
       $or: [
@@ -92,6 +90,7 @@ router.post("/search", async (req, res) => {
     });
   } catch (error) {
     console.log(error);
+    res.status(500).send(`No articles found for this for ${searchNoSpecialChar}.`)
   }
 });
 

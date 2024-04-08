@@ -517,6 +517,10 @@ body .h5.bold {
 #main-section #sections #left-section .article-list:not(.active) {
   display: none;
 }
+#main-section #sections #left-section .article-list.active #article-link-indicator {
+  text-decoration: none;
+  color: #000;
+}
 #main-section #sections #left-section .article-list.active #article-link-indicator .article {
   border-bottom: 1px solid var(--divider);
   margin-top: 24px;

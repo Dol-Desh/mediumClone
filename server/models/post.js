@@ -34,6 +34,7 @@ const postSchema = new Schema({
 
     category: {
         type: String,
+        enum: ['Career', 'Business', 'Productivity', 'Finance', 'Creativity', 'Wellness', 'Programming'],
         required: true
     },
 

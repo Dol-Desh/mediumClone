@@ -16,54 +16,91 @@
                             </div>
 
                             <div class="tab-container">
-                                <button class="tab-button h4 active-tab">For you</button>
-                                <button class="tab-button h4">Following</button>
-                                <button class="tab-button h4">Defi</button>
-                                <button class="tab-button h4">UI</button>
+                                <button class="tab-button h4 active-tab">Career</button>
+                                <button class="tab-button h4">Business</button>
+                                <button class="tab-button h4">Productivity</button>
+                                <button class="tab-button h4">Finance</button>
                                 <button class="tab-button h4">Creativity</button>
                                 <button class="tab-button h4">Wellness</button>
-                                <button class="tab-button h4">Career</button>
+                                <button class="tab-button h4">Programming</button>
                                 <div class="line"></div>
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- For you -->
+                    <!-- Career -->
                     <div class="article-list active">
 
                         <% data.forEach(post=> { %>
 
-                        <!-- Article 1-->
-                        <a id="article-link-indicator" href="/article/<%=post._id%>">
-                            
-                            <div class="article">
+                            <% if (post.category==='Career' ) { %>
 
-                                <div class="article-header">
-                                    <img class="article-writer-image" src="assets/female-profile.jpg"
-                                        alt="writer-image">
-                                    <h4 class="h4"><%= post.name %><span>· Sep 21, 2022</span></h4>
-                                    <img src="assets/star.svg" alt="">
-                                </div>
+                                <!-- Article 1-->
+                                <a id="article-link-indicator" href="/article/<%=post._id%>">
 
-                                <div class="article-content-body">
+                                    <div class="article">
 
-                                    <div class="article-content">
-                                        <div class="article-body">
-                                            <div class="article-title-container">
-                                                <div class="article-title">
-                                                    <h2 class="h2 bold"><%= post.title %></h2>
-                                                    <h3 class="h3"><%= post.body %></h3>
+                                        <div class="article-header">
+                                            <img class="article-writer-image" src="assets/female-profile.jpg"
+                                                alt="writer-image">
+                                            <h4 class="h4">
+                                                <%= post.name %><span>· Sep 21, 2022</span>
+                                            </h4>
+                                            <img src="assets/star.svg" alt="">
+                                        </div>
+
+                                        <div class="article-content-body">
+
+                                            <div class="article-content">
+                                                <div class="article-body">
+                                                    <div class="article-title-container">
+                                                        <div class="article-title">
+                                                            <h2 class="h2 bold">
+                                                                <%= post.title %>
+                                                            </h2>
+                                                            <h3 class="h3">
+                                                                <%= post.body %>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="article-details">
+                                                        <div class="article-duration">
+                                                            <h4 class="h4"><span class="article-category">
+                                                                    <%= post.category %>
+                                                                </span>
+                                                                <%=post.duration%><span>·</span> Selected for you
+                                                            </h4>
+                                                        </div>
+
+                                                        <div id="smallScreen" class="article-actions">
+                                                            <div class="action-container">
+                                                                <img class="icon bookmark-icon"
+                                                                    src="assets/bookmark-add.svg" alt="bookmark icon">
+                                                            </div>
+
+                                                            <div class="more-action-container">
+                                                                <img class="dropdown-trigger"
+                                                                    src="assets/dots-horizontal.svg" alt="more icon">
+
+                                                                <div class="dropdown-content">
+                                                                    <div class="dropdown-menu">
+                                                                        <h4 class="h4">Mute this author</h4>
+                                                                        <h4 class="h4">Mute this publication</h4>
+                                                                        <h4 class="h4">Report</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
 
-                                            <div class="article-details">
-                                                <div class="article-duration">
-                                                    <h4 class="h4"><span class="article-category">Sex</span>9 min read
-                                                        <span>·</span> Selected for you</h4>
-                                                </div>
+                                            <div class="article-image">
+                                                <img class="image-hw" src="assets/naked-people.jpg" alt="article image">
 
-                                                <div id="smallScreen" class="article-actions">
+                                                <div id="wideScreen" class="article-actions">
                                                     <div class="action-container">
                                                         <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
                                                             alt="bookmark icon">
@@ -85,432 +122,618 @@
                                             </div>
                                         </div>
                                     </div>
+                                </a>
 
-                                    <div class="article-image">
-                                        <img class="image-hw" src="assets/naked-people.jpg" alt="article image">
-
-                                        <div id="wideScreen" class="article-actions">
-                                            <div class="action-container">
-                                                <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
-                                                    alt="bookmark icon">
-                                            </div>
-
-                                            <div class="more-action-container">
-                                                <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
-                                                    alt="more icon">
-
-                                                <div class="dropdown-content">
-                                                    <div class="dropdown-menu">
-                                                        <h4 class="h4">Mute this author</h4>
-                                                        <h4 class="h4">Mute this publication</h4>
-                                                        <h4 class="h4">Report</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                            <% } %>
 
                         <% }) %>
-                        
+
                     </div>
 
-                    <!-- Following -->
+                    <!-- Business -->
                     <div class="article-list">
 
-                        <!-- Article 1 -->
-                        <div class="article">
+                        <% data.forEach(post=> { %>
 
-                            <div class="article-header">
-                                <img class="article-writer-image" src="assets/female-profile.jpg" alt="writer-image">
-                                <h4 class="h4">Bobby Powers <span>· 17 hours ago</span></h4>
-                                <img src="assets/star.svg" alt="">
-                            </div>
+                            <% if (post.category==='Business' ) { %>
 
-                            <div class="article-content-body">
+                                <!-- Article 1-->
+                                <a id="article-link-indicator" href="/article/<%=post._id%>">
 
-                                <div class="article-content">
-                                    <div class="article-body">
-                                        <div class="article-title-container">
-                                            <div class="article-title">
-                                                <h2 class="h2 bold">The Best Career Move I Ever Made Was 5 Steps
-                                                    Backward of
-                                                    My
-                                                    Laid Out Initial Career Plan</h2>
-                                                <h3 class="h3">Think of Your Career as a Climbing Wall, Not a Ladder —
-                                                    Six
-                                                    years
-                                                    ago, I made what some people would call the dumbest career move a so
-                                                    goos
-                                                    blah blah blah</h3>
-                                            </div>
+                                    <div class="article">
+
+                                        <div class="article-header">
+                                            <img class="article-writer-image" src="assets/female-profile.jpg"
+                                                alt="writer-image">
+                                            <h4 class="h4">
+                                                <%= post.name %><span>· Sep 21, 2022</span>
+                                            </h4>
+                                            <img src="assets/star.svg" alt="">
                                         </div>
 
-                                        <div class="article-details">
-                                            <div class="article-duration">
-                                                <h4 class="h4"><span>Life</span>9 min read</h4>
+                                        <div class="article-content-body">
+
+                                            <div class="article-content">
+                                                <div class="article-body">
+                                                    <div class="article-title-container">
+                                                        <div class="article-title">
+                                                            <h2 class="h2 bold">
+                                                                <%= post.title %>
+                                                            </h2>
+                                                            <h3 class="h3">
+                                                                <%= post.body %>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="article-details">
+                                                        <div class="article-duration">
+                                                            <h4 class="h4"><span class="article-category">
+                                                                    <%= post.category %>
+                                                                </span>
+                                                                <%=post.duration%><span>·</span> Selected for you
+                                                            </h4>
+                                                        </div>
+
+                                                        <div id="smallScreen" class="article-actions">
+                                                            <div class="action-container">
+                                                                <img class="icon bookmark-icon"
+                                                                    src="assets/bookmark-add.svg" alt="bookmark icon">
+                                                            </div>
+
+                                                            <div class="more-action-container">
+                                                                <img class="dropdown-trigger"
+                                                                    src="assets/dots-horizontal.svg" alt="more icon">
+
+                                                                <div class="dropdown-content">
+                                                                    <div class="dropdown-menu">
+                                                                        <h4 class="h4">Mute this author</h4>
+                                                                        <h4 class="h4">Mute this publication</h4>
+                                                                        <h4 class="h4">Report</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
 
-                                            <div class="article-actions">
-                                                <div class="action-container">
-                                                    <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
-                                                        alt="bookmark icon">
-                                                </div>
+                                            <div class="article-image">
+                                                <img class="image-hw" src="assets/naked-people.jpg" alt="article image">
 
-                                                <div class="more-action-container">
-                                                    <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
-                                                        alt="more icon">
+                                                <div id="wideScreen" class="article-actions">
+                                                    <div class="action-container">
+                                                        <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
+                                                            alt="bookmark icon">
+                                                    </div>
 
-                                                    <div class="dropdown-content">
-                                                        <div class="dropdown-menu">
-                                                            <h4 class="h4">Mute this author</h4>
-                                                            <h4 class="h4">Mute this publication</h4>
-                                                            <h4 class="h4">Report</h4>
+                                                    <div class="more-action-container">
+                                                        <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
+                                                            alt="more icon">
+
+                                                        <div class="dropdown-content">
+                                                            <div class="dropdown-menu">
+                                                                <h4 class="h4">Mute this author</h4>
+                                                                <h4 class="h4">Mute this publication</h4>
+                                                                <h4 class="h4">Report</h4>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
 
-                                <div class="article-image">
-                                    <img src="assets/female-profile.jpg" alt="article image">
-                                </div>
-                            </div>
-                        </div>
+                            <% } %>
+
+                        <% }) %>
+
                     </div>
 
-                    <!-- Defi -->
+                    <!-- Productivity -->
                     <div class="article-list">
 
-                        <!-- Article 1 -->
-                        <div class="article">
+                        <% data.forEach(post=> { %>
 
-                            <div class="article-header">
-                                <img class="article-writer-image" src="assets/female-profile.jpg" alt="writer-image">
-                                <h4 class="h4">Bobby Powers <span>· 17 hours ago</span></h4>
-                                <img src="assets/star.svg" alt="">
-                            </div>
+                            <% if (post.category==='Productivity' ) { %>
 
-                            <div class="article-content-body">
+                                <!-- Article 1-->
+                                <a id="article-link-indicator" href="/article/<%=post._id%>">
 
-                                <div class="article-content">
-                                    <div class="article-body">
-                                        <div class="article-title-container">
-                                            <div class="article-title">
-                                                <h2 class="h2 bold">The Best Career Move I Ever Made Was 5 Steps
-                                                    Backward of
-                                                    My
-                                                    Laid Out Initial Career Plan</h2>
-                                                <h3 class="h3">Think of Your Career as a Climbing Wall, Not a Ladder —
-                                                    Six
-                                                    years
-                                                    ago, I made what some people would call the dumbest career move a so
-                                                    goos
-                                                    blah blah blah</h3>
-                                            </div>
+                                    <div class="article">
+
+                                        <div class="article-header">
+                                            <img class="article-writer-image" src="assets/female-profile.jpg"
+                                                alt="writer-image">
+                                            <h4 class="h4">
+                                                <%= post.name %><span>· Sep 21, 2022</span>
+                                            </h4>
+                                            <img src="assets/star.svg" alt="">
                                         </div>
 
-                                        <div class="article-details">
-                                            <div class="article-duration">
-                                                <h4 class="h4"><span>Life</span>9 min read</h4>
+                                        <div class="article-content-body">
+
+                                            <div class="article-content">
+                                                <div class="article-body">
+                                                    <div class="article-title-container">
+                                                        <div class="article-title">
+                                                            <h2 class="h2 bold">
+                                                                <%= post.title %>
+                                                            </h2>
+                                                            <h3 class="h3">
+                                                                <%= post.body %>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="article-details">
+                                                        <div class="article-duration">
+                                                            <h4 class="h4"><span class="article-category">
+                                                                    <%= post.category %>
+                                                                </span>
+                                                                <%=post.duration%><span>·</span> Selected for you
+                                                            </h4>
+                                                        </div>
+
+                                                        <div id="smallScreen" class="article-actions">
+                                                            <div class="action-container">
+                                                                <img class="icon bookmark-icon"
+                                                                    src="assets/bookmark-add.svg" alt="bookmark icon">
+                                                            </div>
+
+                                                            <div class="more-action-container">
+                                                                <img class="dropdown-trigger"
+                                                                    src="assets/dots-horizontal.svg" alt="more icon">
+
+                                                                <div class="dropdown-content">
+                                                                    <div class="dropdown-menu">
+                                                                        <h4 class="h4">Mute this author</h4>
+                                                                        <h4 class="h4">Mute this publication</h4>
+                                                                        <h4 class="h4">Report</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
 
-                                            <div class="article-actions">
-                                                <div class="action-container">
-                                                    <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
-                                                        alt="bookmark icon">
-                                                </div>
+                                            <div class="article-image">
+                                                <img class="image-hw" src="assets/naked-people.jpg" alt="article image">
 
-                                                <div class="more-action-container">
-                                                    <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
-                                                        alt="more icon">
+                                                <div id="wideScreen" class="article-actions">
+                                                    <div class="action-container">
+                                                        <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
+                                                            alt="bookmark icon">
+                                                    </div>
 
-                                                    <div class="dropdown-content">
-                                                        <div class="dropdown-menu">
-                                                            <h4 class="h4">Mute this author</h4>
-                                                            <h4 class="h4">Mute this publication</h4>
-                                                            <h4 class="h4">Report</h4>
+                                                    <div class="more-action-container">
+                                                        <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
+                                                            alt="more icon">
+
+                                                        <div class="dropdown-content">
+                                                            <div class="dropdown-menu">
+                                                                <h4 class="h4">Mute this author</h4>
+                                                                <h4 class="h4">Mute this publication</h4>
+                                                                <h4 class="h4">Report</h4>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
 
-                                <div class="article-image">
-                                    <img src="assets/female-profile.jpg" alt="article image">
-                                </div>
-                            </div>
-                        </div>
+                            <% } %>
+
+                        <% }) %>
+
                     </div>
 
-                    <!-- UI -->
+                    <!-- Finance -->
                     <div class="article-list">
 
-                        <!-- Article 1 -->
-                        <div class="article">
+                        <% data.forEach(post=> { %>
 
-                            <div class="article-header">
-                                <img class="article-writer-image" src="assets/female-profile.jpg" alt="writer-image">
-                                <h4 class="h4">Bobby Powers <span>· 17 hours ago</span></h4>
-                                <img src="assets/star.svg" alt="">
-                            </div>
+                            <% if (post.category==='Finance' ) { %>
 
-                            <div class="article-content-body">
+                                <!-- Article 1-->
+                                <a id="article-link-indicator" href="/article/<%=post._id%>">
 
-                                <div class="article-content">
-                                    <div class="article-body">
-                                        <div class="article-title-container">
-                                            <div class="article-title">
-                                                <h2 class="h2 bold">The Best Career Move I Ever Made Was 5 Steps
-                                                    Backward of
-                                                    My
-                                                    Laid Out Initial Career Plan</h2>
-                                                <h3 class="h3">Think of Your Career as a Climbing Wall, Not a Ladder —
-                                                    Six
-                                                    years
-                                                    ago, I made what some people would call the dumbest career move a so
-                                                    goos
-                                                    blah blah blah</h3>
-                                            </div>
+                                    <div class="article">
+
+                                        <div class="article-header">
+                                            <img class="article-writer-image" src="assets/female-profile.jpg"
+                                                alt="writer-image">
+                                            <h4 class="h4">
+                                                <%= post.name %><span>· Sep 21, 2022</span>
+                                            </h4>
+                                            <img src="assets/star.svg" alt="">
                                         </div>
 
-                                        <div class="article-details">
-                                            <div class="article-duration">
-                                                <h4 class="h4"><span>Life</span>9 min read</h4>
+                                        <div class="article-content-body">
+
+                                            <div class="article-content">
+                                                <div class="article-body">
+                                                    <div class="article-title-container">
+                                                        <div class="article-title">
+                                                            <h2 class="h2 bold">
+                                                                <%= post.title %>
+                                                            </h2>
+                                                            <h3 class="h3">
+                                                                <%= post.body %>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="article-details">
+                                                        <div class="article-duration">
+                                                            <h4 class="h4"><span class="article-category">
+                                                                    <%= post.category %>
+                                                                </span>
+                                                                <%=post.duration%><span>·</span> Selected for you
+                                                            </h4>
+                                                        </div>
+
+                                                        <div id="smallScreen" class="article-actions">
+                                                            <div class="action-container">
+                                                                <img class="icon bookmark-icon"
+                                                                    src="assets/bookmark-add.svg" alt="bookmark icon">
+                                                            </div>
+
+                                                            <div class="more-action-container">
+                                                                <img class="dropdown-trigger"
+                                                                    src="assets/dots-horizontal.svg" alt="more icon">
+
+                                                                <div class="dropdown-content">
+                                                                    <div class="dropdown-menu">
+                                                                        <h4 class="h4">Mute this author</h4>
+                                                                        <h4 class="h4">Mute this publication</h4>
+                                                                        <h4 class="h4">Report</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
 
-                                            <div class="article-actions">
-                                                <div class="action-container">
-                                                    <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
-                                                        alt="bookmark icon">
-                                                </div>
+                                            <div class="article-image">
+                                                <img class="image-hw" src="assets/naked-people.jpg" alt="article image">
 
-                                                <div class="more-action-container">
-                                                    <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
-                                                        alt="more icon">
+                                                <div id="wideScreen" class="article-actions">
+                                                    <div class="action-container">
+                                                        <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
+                                                            alt="bookmark icon">
+                                                    </div>
 
-                                                    <div class="dropdown-content">
-                                                        <div class="dropdown-menu">
-                                                            <h4 class="h4">Mute this author</h4>
-                                                            <h4 class="h4">Mute this publication</h4>
-                                                            <h4 class="h4">Report</h4>
+                                                    <div class="more-action-container">
+                                                        <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
+                                                            alt="more icon">
+
+                                                        <div class="dropdown-content">
+                                                            <div class="dropdown-menu">
+                                                                <h4 class="h4">Mute this author</h4>
+                                                                <h4 class="h4">Mute this publication</h4>
+                                                                <h4 class="h4">Report</h4>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
 
-                                <div class="article-image">
-                                    <img src="assets/female-profile.jpg" alt="article image">
-                                </div>
-                            </div>
-                        </div>
+                            <% } %>
+
+                        <% }) %>
+
                     </div>
 
                     <!-- Creativity -->
                     <div class="article-list">
 
-                        <!-- Article 1 -->
-                        <div class="article">
+                        <% data.forEach(post=> { %>
 
-                            <div class="article-header">
-                                <img class="article-writer-image" src="assets/female-profile.jpg" alt="writer-image">
-                                <h4 class="h4">Bobby Powers <span>· 17 hours ago</span></h4>
-                                <img src="assets/star.svg" alt="">
-                            </div>
+                            <% if (post.category==='Creativity' ) { %>
 
-                            <div class="article-content-body">
+                                <!-- Article 1-->
+                                <a id="article-link-indicator" href="/article/<%=post._id%>">
 
-                                <div class="article-content">
-                                    <div class="article-body">
-                                        <div class="article-title-container">
-                                            <div class="article-title">
-                                                <h2 class="h2 bold">The Best Career Move I Ever Made Was 5 Steps
-                                                    Backward of
-                                                    My
-                                                    Laid Out Initial Career Plan</h2>
-                                                <h3 class="h3">Think of Your Career as a Climbing Wall, Not a Ladder —
-                                                    Six
-                                                    years
-                                                    ago, I made what some people would call the dumbest career move a so
-                                                    goos
-                                                    blah blah blah</h3>
-                                            </div>
+                                    <div class="article">
+
+                                        <div class="article-header">
+                                            <img class="article-writer-image" src="assets/female-profile.jpg"
+                                                alt="writer-image">
+                                            <h4 class="h4">
+                                                <%= post.name %><span>· Sep 21, 2022</span>
+                                            </h4>
+                                            <img src="assets/star.svg" alt="">
                                         </div>
 
-                                        <div class="article-details">
-                                            <div class="article-duration">
-                                                <h4 class="h4"><span>Life</span>9 min read</h4>
+                                        <div class="article-content-body">
+
+                                            <div class="article-content">
+                                                <div class="article-body">
+                                                    <div class="article-title-container">
+                                                        <div class="article-title">
+                                                            <h2 class="h2 bold">
+                                                                <%= post.title %>
+                                                            </h2>
+                                                            <h3 class="h3">
+                                                                <%= post.body %>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="article-details">
+                                                        <div class="article-duration">
+                                                            <h4 class="h4"><span class="article-category">
+                                                                    <%= post.category %>
+                                                                </span>
+                                                                <%=post.duration%><span>·</span> Selected for you
+                                                            </h4>
+                                                        </div>
+
+                                                        <div id="smallScreen" class="article-actions">
+                                                            <div class="action-container">
+                                                                <img class="icon bookmark-icon"
+                                                                    src="assets/bookmark-add.svg" alt="bookmark icon">
+                                                            </div>
+
+                                                            <div class="more-action-container">
+                                                                <img class="dropdown-trigger"
+                                                                    src="assets/dots-horizontal.svg" alt="more icon">
+
+                                                                <div class="dropdown-content">
+                                                                    <div class="dropdown-menu">
+                                                                        <h4 class="h4">Mute this author</h4>
+                                                                        <h4 class="h4">Mute this publication</h4>
+                                                                        <h4 class="h4">Report</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
 
-                                            <div class="article-actions">
-                                                <div class="action-container">
-                                                    <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
-                                                        alt="bookmark icon">
-                                                </div>
+                                            <div class="article-image">
+                                                <img class="image-hw" src="assets/naked-people.jpg" alt="article image">
 
-                                                <div class="more-action-container">
-                                                    <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
-                                                        alt="more icon">
+                                                <div id="wideScreen" class="article-actions">
+                                                    <div class="action-container">
+                                                        <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
+                                                            alt="bookmark icon">
+                                                    </div>
 
-                                                    <div class="dropdown-content">
-                                                        <div class="dropdown-menu">
-                                                            <h4 class="h4">Mute this author</h4>
-                                                            <h4 class="h4">Mute this publication</h4>
-                                                            <h4 class="h4">Report</h4>
+                                                    <div class="more-action-container">
+                                                        <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
+                                                            alt="more icon">
+
+                                                        <div class="dropdown-content">
+                                                            <div class="dropdown-menu">
+                                                                <h4 class="h4">Mute this author</h4>
+                                                                <h4 class="h4">Mute this publication</h4>
+                                                                <h4 class="h4">Report</h4>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
 
-                                <div class="article-image">
-                                    <img src="assets/female-profile.jpg" alt="article image">
-                                </div>
-                            </div>
-                        </div>
+                            <% } %>
+
+                        <% }) %>
+
                     </div>
 
                     <!-- Wellness -->
                     <div class="article-list">
 
-                        <!-- Article 1 -->
-                        <div class="article">
+                        <% data.forEach(post=> { %>
 
-                            <div class="article-header">
-                                <img class="article-writer-image" src="assets/female-profile.jpg" alt="writer-image">
-                                <h4 class="h4">Bobby Powers <span>· 17 hours ago</span></h4>
-                                <img src="assets/star.svg" alt="">
-                            </div>
+                            <% if (post.category==='Wellness' ) { %>
 
-                            <div class="article-content-body">
+                                <!-- Article 1-->
+                                <a id="article-link-indicator" href="/article/<%=post._id%>">
 
-                                <div class="article-content">
-                                    <div class="article-body">
-                                        <div class="article-title-container">
-                                            <div class="article-title">
-                                                <h2 class="h2 bold">The Best Career Move I Ever Made Was 5 Steps
-                                                    Backward of
-                                                    My
-                                                    Laid Out Initial Career Plan</h2>
-                                                <h3 class="h3">Think of Your Career as a Climbing Wall, Not a Ladder —
-                                                    Six
-                                                    years
-                                                    ago, I made what some people would call the dumbest career move a so
-                                                    goos
-                                                    blah blah blah</h3>
-                                            </div>
+                                    <div class="article">
+
+                                        <div class="article-header">
+                                            <img class="article-writer-image" src="assets/female-profile.jpg"
+                                                alt="writer-image">
+                                            <h4 class="h4">
+                                                <%= post.name %><span>· Sep 21, 2022</span>
+                                            </h4>
+                                            <img src="assets/star.svg" alt="">
                                         </div>
 
-                                        <div class="article-details">
-                                            <div class="article-duration">
-                                                <h4 class="h4"><span>Life</span>9 min read</h4>
+                                        <div class="article-content-body">
+
+                                            <div class="article-content">
+                                                <div class="article-body">
+                                                    <div class="article-title-container">
+                                                        <div class="article-title">
+                                                            <h2 class="h2 bold">
+                                                                <%= post.title %>
+                                                            </h2>
+                                                            <h3 class="h3">
+                                                                <%= post.body %>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="article-details">
+                                                        <div class="article-duration">
+                                                            <h4 class="h4"><span class="article-category">
+                                                                    <%= post.category %>
+                                                                </span>
+                                                                <%=post.duration%><span>·</span> Selected for you
+                                                            </h4>
+                                                        </div>
+
+                                                        <div id="smallScreen" class="article-actions">
+                                                            <div class="action-container">
+                                                                <img class="icon bookmark-icon"
+                                                                    src="assets/bookmark-add.svg" alt="bookmark icon">
+                                                            </div>
+
+                                                            <div class="more-action-container">
+                                                                <img class="dropdown-trigger"
+                                                                    src="assets/dots-horizontal.svg" alt="more icon">
+
+                                                                <div class="dropdown-content">
+                                                                    <div class="dropdown-menu">
+                                                                        <h4 class="h4">Mute this author</h4>
+                                                                        <h4 class="h4">Mute this publication</h4>
+                                                                        <h4 class="h4">Report</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
 
-                                            <div class="article-actions">
-                                                <div class="action-container">
-                                                    <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
-                                                        alt="bookmark icon">
-                                                </div>
+                                            <div class="article-image">
+                                                <img class="image-hw" src="assets/naked-people.jpg" alt="article image">
 
-                                                <div class="more-action-container">
-                                                    <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
-                                                        alt="more icon">
+                                                <div id="wideScreen" class="article-actions">
+                                                    <div class="action-container">
+                                                        <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
+                                                            alt="bookmark icon">
+                                                    </div>
 
-                                                    <div class="dropdown-content">
-                                                        <div class="dropdown-menu">
-                                                            <h4 class="h4">Mute this author</h4>
-                                                            <h4 class="h4">Mute this publication</h4>
-                                                            <h4 class="h4">Report</h4>
+                                                    <div class="more-action-container">
+                                                        <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
+                                                            alt="more icon">
+
+                                                        <div class="dropdown-content">
+                                                            <div class="dropdown-menu">
+                                                                <h4 class="h4">Mute this author</h4>
+                                                                <h4 class="h4">Mute this publication</h4>
+                                                                <h4 class="h4">Report</h4>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
 
-                                <div class="article-image">
-                                    <img src="assets/female-profile.jpg" alt="article image">
-                                </div>
-                            </div>
-                        </div>
+                            <% } %>
+
+                        <% }) %>
+
                     </div>
 
-                    <!-- Career -->
+                    <!-- Programming -->
                     <div class="article-list">
 
-                        <!-- Article 1 -->
-                        <div class="article">
+                        <% data.forEach(post=> { %>
 
-                            <div class="article-header">
-                                <img class="article-writer-image" src="assets/female-profile.jpg" alt="writer-image">
-                                <h4 class="h4">Bobby Powers <span>· 17 hours ago</span></h4>
-                                <img src="assets/star.svg" alt="">
-                            </div>
+                            <% if (post.category==='Programming' ) { %>
 
-                            <div class="article-content-body">
+                                <!-- Article 1-->
+                                <a id="article-link-indicator" href="/article/<%=post._id%>">
 
-                                <div class="article-content">
-                                    <div class="article-body">
-                                        <div class="article-title-container">
-                                            <div class="article-title">
-                                                <h2 class="h2 bold">The Best Career Move I Ever Made Was 5 Steps
-                                                    Backward of
-                                                    My
-                                                    Laid Out Initial Career Plan</h2>
-                                                <h3 class="h3">Think of Your Career as a Climbing Wall, Not a Ladder —
-                                                    Six
-                                                    years
-                                                    ago, I made what some people would call the dumbest career move a so
-                                                    goos
-                                                    blah blah blah</h3>
-                                            </div>
+                                    <div class="article">
+
+                                        <div class="article-header">
+                                            <img class="article-writer-image" src="assets/female-profile.jpg"
+                                                alt="writer-image">
+                                            <h4 class="h4">
+                                                <%= post.name %><span>· Sep 21, 2022</span>
+                                            </h4>
+                                            <img src="assets/star.svg" alt="">
                                         </div>
 
-                                        <div class="article-details">
-                                            <div class="article-duration">
-                                                <h4 class="h4"><span>Life</span>9 min read</h4>
+                                        <div class="article-content-body">
+
+                                            <div class="article-content">
+                                                <div class="article-body">
+                                                    <div class="article-title-container">
+                                                        <div class="article-title">
+                                                            <h2 class="h2 bold">
+                                                                <%= post.title %>
+                                                            </h2>
+                                                            <h3 class="h3">
+                                                                <%= post.body %>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="article-details">
+                                                        <div class="article-duration">
+                                                            <h4 class="h4"><span class="article-category">
+                                                                    <%= post.category %>
+                                                                </span>
+                                                                <%=post.duration%><span>·</span> Selected for you
+                                                            </h4>
+                                                        </div>
+
+                                                        <div id="smallScreen" class="article-actions">
+                                                            <div class="action-container">
+                                                                <img class="icon bookmark-icon"
+                                                                    src="assets/bookmark-add.svg" alt="bookmark icon">
+                                                            </div>
+
+                                                            <div class="more-action-container">
+                                                                <img class="dropdown-trigger"
+                                                                    src="assets/dots-horizontal.svg" alt="more icon">
+
+                                                                <div class="dropdown-content">
+                                                                    <div class="dropdown-menu">
+                                                                        <h4 class="h4">Mute this author</h4>
+                                                                        <h4 class="h4">Mute this publication</h4>
+                                                                        <h4 class="h4">Report</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
 
-                                            <div class="article-actions">
-                                                <div class="action-container">
-                                                    <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
-                                                        alt="bookmark icon">
-                                                </div>
+                                            <div class="article-image">
+                                                <img class="image-hw" src="assets/naked-people.jpg" alt="article image">
 
-                                                <div class="more-action-container">
-                                                    <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
-                                                        alt="more icon">
+                                                <div id="wideScreen" class="article-actions">
+                                                    <div class="action-container">
+                                                        <img class="icon bookmark-icon" src="assets/bookmark-add.svg"
+                                                            alt="bookmark icon">
+                                                    </div>
 
-                                                    <div class="dropdown-content">
-                                                        <div class="dropdown-menu">
-                                                            <h4 class="h4">Mute this author</h4>
-                                                            <h4 class="h4">Mute this publication</h4>
-                                                            <h4 class="h4">Report</h4>
+                                                    <div class="more-action-container">
+                                                        <img class="dropdown-trigger" src="assets/dots-horizontal.svg"
+                                                            alt="more icon">
+
+                                                        <div class="dropdown-content">
+                                                            <div class="dropdown-menu">
+                                                                <h4 class="h4">Mute this author</h4>
+                                                                <h4 class="h4">Mute this publication</h4>
+                                                                <h4 class="h4">Report</h4>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
 
-                                <div class="article-image">
-                                    <img src="assets/female-profile.jpg" alt="article image">
-                                </div>
-                            </div>
-                        </div>
+                            <% } %>
+
+                        <% }) %>
+
                     </div>
                 </div>
 
@@ -684,5 +907,3 @@
 
         <script src="index.js"></script>
 </body>
-
-</html>

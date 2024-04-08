@@ -634,6 +634,8 @@ body {
             .article-list.active {
 
                 #article-link-indicator {
+                    text-decoration: none;
+                    color: #000;
 
                     .article {
                         border-bottom: 1px solid var(--divider);
