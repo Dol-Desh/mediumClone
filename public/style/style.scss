@@ -75,11 +75,11 @@
                 padding-bottom: 32px;
                 border-bottom: 1px solid var(--divider);
                 align-items: center;
-    
+
                 .recommended-follow-container {
                     width: 100%;
                 }
-    
+
                 .follow-button {
                     border: 0px;
                     background-color: var(--button-green);
@@ -328,7 +328,8 @@ body {
                 @include respond(medium) {
                     display: flex;
                     justify-content: center;
-                    background-color: var(--grey3);
+                    background-color: var(--white);
+                    border: 1.5px solid var(--grey3);
                     padding: 0.625rem 0.75rem;
                     border-radius: 62.4375rem;
                     margin-left: 1rem;
@@ -341,6 +342,7 @@ body {
                 }
 
                 input {
+                    width: 100%;
                     background: none;
                     border: none;
                     outline: none;
@@ -644,6 +646,45 @@ body {
 
             &::-webkit-scrollbar {
                 display: none;
+            }
+
+            #searchMobileContainer {
+                display: flex;
+
+                &.show {
+                    display: block;
+                }
+
+                @include respond(medium) {
+                    display: none;
+                }
+
+                .search-wrapper {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    background-color: var(--white);
+                    border: 1.5px solid var(--grey3);
+                    padding: 0.625rem 0.75rem;
+                    border-radius: 62.4375rem;
+                }
+
+                img {
+                    margin-right: 8px;
+                    height: 20px;
+                    width: 20px;
+                }
+
+                input {
+                    width: 100%;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    margin-right: 1rem;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
             }
 
             #results-header {

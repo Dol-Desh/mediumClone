@@ -7,6 +7,13 @@
 
                 <div id="left-section">
 
+                    <div id="searchMobileContainer" style="display: none;">
+                        <form action="/search" method="POST" id="searchMobile" class="search-wrapper" role="search">
+                            <img src="../assets/search-sm.svg" alt="">
+                            <input type="search" aria-label="Search" name="searchTerm" id="searchInput" class="h4" placeholder="Search..">
+                        </form>
+                    </div>
+
                     <h2 id="results-header" class="heading bold">Results for <span class="returned-search-term">
                             <%= searchNoSpecialChar %>
                         </span></h2>

@@ -1,5 +1,11 @@
 //Function for all all modals
-function setupModal(modalId, openModalId, closeModalId, sourceID, destinationID) {
+function setupModal(
+  modalId,
+  openModalId,
+  closeModalId,
+  sourceID,
+  destinationID
+) {
   const modal = document.getElementById(modalId);
   const openModal = document.getElementById(openModalId);
   const closeModal = document.getElementById(closeModalId);
@@ -32,8 +38,20 @@ function setupModal(modalId, openModalId, closeModalId, sourceID, destinationID)
   }
 }
 
-setupModal("sign-up-modal", "get-started-menu", "sign-up-close", "sign-in-button", "sign-in-modal");
-setupModal("sign-in-modal", "sign-in-button", "sign-in-close", "sign-up-button", "sign-up-modal");
+setupModal(
+  "sign-up-modal",
+  "get-started-menu",
+  "sign-up-close",
+  "sign-in-button",
+  "sign-in-modal"
+);
+setupModal(
+  "sign-in-modal",
+  "sign-in-button",
+  "sign-in-close",
+  "sign-up-button",
+  "sign-up-modal"
+);
 
 //Javascript code for changing the contents of tabs as the tab changes
 const allTabs = document.querySelectorAll(".tab-button");
@@ -70,11 +88,10 @@ function dropdownList(dropdownClass, dropdownTrigger) {
 
   commonAncestor.addEventListener("click", function (event) {
     const target = event.target;
-    
+
     if (target.matches(dropdownTrigger)) {
       const dropdown = target.nextElementSibling;
       dropdown.classList.toggle("show");
-
     } else if (!target.closest("." + dropdownClass)) {
       const dropdowns = document.querySelectorAll("." + dropdownClass);
       dropdowns.forEach(function (dropdown) {
@@ -87,3 +104,16 @@ function dropdownList(dropdownClass, dropdownTrigger) {
 dropdownList("dropdown-content", ".dropdown-trigger");
 dropdownList("dropdown-content2", ".dropdown-trigger2");
 dropdownList("dot-dropdown-content", ".more-dropdown-trigger");
+
+//search results
+function toggleSearch() {
+  const container = document.getElementById("searchMobileContainer");
+
+  if (container.style.display === "none") {
+    container.style.display = "block";
+  } else {
+    container.style.display = "none";
+  }
+}
+
+document.getElementById('toggleSearchFunctionality').addEventListener('click', toggleSearch);

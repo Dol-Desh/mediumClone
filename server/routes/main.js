@@ -82,7 +82,11 @@ router.post("/search", async (req, res) => {
     });
 
     //filter for the name of the author
-    const authorName = data.map(post => post.name).filter(name => name.toLowerCase().includes(searchNoSpecialChar.toLowerCase()));
+    const authorName = data
+      .map((post) => post.name)
+      .filter((name) =>
+        name.toLowerCase().includes(searchNoSpecialChar.toLowerCase())
+      );
 
     res.render("search.ejs", {
       data,
@@ -90,7 +94,6 @@ router.post("/search", async (req, res) => {
       searchNoSpecialChar,
       authorName
     });
-
   } catch (error) {
     console.log(error);
     res
