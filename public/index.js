@@ -105,15 +105,27 @@ dropdownList("dropdown-content", ".dropdown-trigger");
 dropdownList("dropdown-content2", ".dropdown-trigger2");
 dropdownList("dot-dropdown-content", ".more-dropdown-trigger");
 
+random = document.getElementById("searchInput");
+
 //search results
 function toggleSearch() {
   const container = document.getElementById("searchMobileContainer");
 
   if (container.style.display === "none") {
     container.style.display = "block";
+    random.value = "review";
+    console.log(random.value);
   } else {
     container.style.display = "none";
   }
 }
 
-document.getElementById('toggleSearchFunctionality').addEventListener('click', toggleSearch);
+document
+  .getElementById("toggleSearchFunctionality")
+  .addEventListener("click", toggleSearch);
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const allButtons = document.getElementById("toggleSearchFunctionality");
+  const searchBar = document.getElementById("searchMobileContainer");
+});

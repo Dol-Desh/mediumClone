@@ -4,18 +4,18 @@ import Post from "../models/post.js";
 // import EditorJS from '@editorjs/editorjs';
 
 //routes
-router.get("/", async (req, res) => {
-  const locals = {
-    title: "nodeJS blog",
-  };
+// router.get("/", async (req, res) => {
+//   const locals = {
+//     title: "nodeJS blog",
+//   };
 
-  try {
-    const data = await Post.find();
-    res.render("index.ejs", { locals, data });
-  } catch (error) {
-    console.log(error);
-  }
-});
+//   try {
+//     const data = await Post.find();
+//     res.render("index.ejs", { locals, data });
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 
 router.get("/home", async (req, res) => {
   const locals = {
@@ -38,9 +38,6 @@ router.get("/write", (req, res) => {
   res.render("write.ejs");
 });
 
-router.get("/image", (req, res) => {
-  res.render("image.ejs");
-});
 
 //article route
 router.get("/article/:id", async (req, res) => {

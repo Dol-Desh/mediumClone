@@ -6,6 +6,7 @@ dotenv.config();
 import express from "express";
 import expressEjsLayouts from "express-ejs-layouts";
 import router from "./server/routes/main.js";
+import admin from "./server/routes/admin.js";
 import connectDB from "./server/config/db.js";
 
 const app = express();
@@ -25,6 +26,7 @@ app.set("layout", "layouts/main");
 app.set("view engine", "ejs");
 
 app.use("/", router);
+app.use("/", admin);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);

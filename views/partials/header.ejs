@@ -9,15 +9,17 @@
         <div class="left-container">
             <img src="../assets/logo.svg" alt="website-logo">
 
-            <form action="/search" method="POST" class="search-wrapper" role="search">
-                <img src="../assets/search-sm.svg" alt="">
-                <input type="search" aria-label="Search" name="searchTerm" id="searchInput" class="h4" placeholder="Search..">
-            </form>
+            <div id="searchMobileContainer" style="display: none;">
+                <form action="/search" method="POST" id="searchMobile" class="search-wrapper" role="search">
+                    <img src="../assets/search-sm.svg" alt="">
+                    <input type="search" aria-label="Search" name="searchTerm" id="searchInput" class="h4" placeholder="Search..">
+                </form>
+            </div>
         </div>
 
         <div class="top-nav-icons">
             <a class="edit" href=""><img src="../assets/edit-05.svg" alt="">Write</a>
-            <img id="toggleSearchFunctionality" class="search" src="../assets/search-sm.svg" alt="search">
+            <img action="/search" id="toggleSearchFunctionality" class="search" src="../assets/search-sm.svg" alt="search">
             <img src="../assets/bell-01.svg" alt="notifications">
 
             <div class="account">
