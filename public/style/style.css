@@ -1491,7 +1491,7 @@ body .h5.bold {
   }
 }
 #h-website-home .modal .modal-container #sign-up-close,
-#h-website-home .modal .modal-container #sign-in-close {
+#h-website-home .modal .modal-container #sign-in-close, #h-website-home .modal .modal-container #email-close {
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
@@ -1527,8 +1527,9 @@ body .h5.bold {
   gap: 8px;
   margin-bottom: 40px;
 }
-#h-website-home .modal .modal-container .get-started-content .sign-up-options .sign-up-method,
-#h-website-home .modal .modal-container .get-started-content .sign-in-options .sign-up-method {
+#h-website-home .modal .modal-container .get-started-content .sign-up-options .sign-up-method, #h-website-home .modal .modal-container .get-started-content .sign-up-options .sign-in-method,
+#h-website-home .modal .modal-container .get-started-content .sign-in-options .sign-up-method,
+#h-website-home .modal .modal-container .get-started-content .sign-in-options .sign-in-method {
   width: 300px;
   display: flex;
   flex-wrap: wrap;
@@ -1542,8 +1543,9 @@ body .h5.bold {
   cursor: pointer;
   text-decoration: none;
 }
-#h-website-home .modal .modal-container .get-started-content .sign-up-options .sign-up-method img,
-#h-website-home .modal .modal-container .get-started-content .sign-in-options .sign-up-method img {
+#h-website-home .modal .modal-container .get-started-content .sign-up-options .sign-up-method img, #h-website-home .modal .modal-container .get-started-content .sign-up-options .sign-in-method img,
+#h-website-home .modal .modal-container .get-started-content .sign-in-options .sign-up-method img,
+#h-website-home .modal .modal-container .get-started-content .sign-in-options .sign-in-method img {
   width: 24px;
   height: 24px;
   left: 4px;

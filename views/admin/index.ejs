@@ -28,7 +28,7 @@
                             Google</button>
                         <button class="sign-up-method h3"><img src="assets/facebook.svg" alt="">Sign up with
                             Facebook</button>
-                        <button class="sign-up-method h3"><img src="assets/gmail.svg" alt="">Sign up with Email</button>
+                        <button id="open-gmail-sign-up" class="sign-up-method h3"><img src="assets/gmail.svg" alt="">Sign up with Email</button>
                     </div>
 
                     <h3 class="h3">Already have an account? <span id="sign-in-button">Sign in</span></h3>
@@ -38,6 +38,36 @@
                     </h4>
                 </div>
             </div>
+        </dialog>
+
+        <dialog id="email-sign-up-modal" class="modal">
+            <div>
+                <div id="sign-up-email-close">
+                    <img class="icon-close" src="assets/x-close.svg" alt="">
+                </div>
+
+                <div class="email-sign-up-content">
+
+                    <h4 class="get-started-text">Sign up with email</h4>
+
+                    <h2 class="h2">Enter your email address to create an account.</h2>
+
+                    <form class="login=form" action="/register" method="POST">
+
+                        <label for="email">Your email</label>
+                        <input type="email" placeholder="" name="email">
+
+                        <label for="password">Your password</label>
+                        <input type="password" placeholder="" name="password">
+
+                        <input type="submit" value="Register" class="login-button">
+                    </form>
+
+                    <button id="all-sign-up-options" alt=""> <img src="assets/chevron-left.svg"> All sign up options</button>
+                </div>
+
+            </div>
+
         </dialog>
 
         <dialog id="sign-in-modal" class="modal">
@@ -51,13 +81,13 @@
                     <h4 class="get-started-text">Welcome Back.</h4>
 
                     <div class="sign-in-options">
-                        <a href="/home" class="sign-up-method h3"><img src="assets/google.svg" alt="">Sign in with
+                        <a href="/home" class="sign-in-method h3"><img src="assets/google.svg" alt="">Sign in with
                             Google</a>
-                        <a href="/article" class="sign-up-method h3"><img src="assets/facebook.svg" alt="">Sign in with
+                        <a href="/article" class="sign-in-method h3"><img src="assets/facebook.svg" alt="">Sign in with
                             Facebook</a>
-                        <a class="sign-up-method h3"><img src="assets/apple.svg" alt="">Sign in with Apple</a>
-                        <a class="sign-up-method h3"><img src="assets/x.svg" alt="">Sign in with Twitter</a>
-                        <a class="sign-up-method h3"><img src="assets/gmail.svg" alt="">Sign in with email</a>
+                        <a class="sign-in-method h3"><img src="assets/apple.svg" alt="">Sign in with Apple</a>
+                        <a class="sign-in-method h3"><img src="assets/x.svg" alt="">Sign in with Twitter</a>
+                        <a id="open-gmail-sign-in" class="sign-in-method h3"><img src="assets/gmail.svg" alt="">Sign in with email</a>
                     </div>
 
                     <h3 class="h3">No account? <span id="sign-up-button">Create one</span></h3>
@@ -68,6 +98,36 @@
                     </h4>
                 </div>
             </div>
+        </dialog>
+
+        <dialog id="email-sign-in-modal" class="modal">
+            <div>
+                <div id="sign-in-email-close">
+                    <img class="icon-close" src="assets/x-close.svg" alt="">
+                </div>
+
+                <div class="email-sign-in-content">
+
+                    <h4 class="get-started-text">Sign in with email</h4>
+
+                    <h2 class="h2">Enter the email address associated with your account.</h2>
+
+                    <form class="login=form" action="/login" method="POST">
+
+                        <label for="email">Your email</label>
+                        <input type="email" placeholder="" name="email">
+
+                        <label for="password">Your password</label>
+                        <input type="password" placeholder="" name="password">
+
+                        <input type="submit" value="login" class="login-button">
+                    </form>
+
+                    <button id="all-sign-in-options" alt=""> <img src="assets/chevron-left.svg"> All sign in options</button>
+                </div>
+
+            </div>
+
         </dialog>
 
         <div class="h-content-text">
@@ -378,7 +438,7 @@
         </div>
     </footer>
 
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
 </body>
 
 </html>

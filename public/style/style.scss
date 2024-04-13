@@ -1751,7 +1751,7 @@ body {
             }
 
             #sign-up-close,
-            #sign-in-close {
+            #sign-in-close, #email-close {
                 display: flex;
                 justify-content: flex-end;
                 cursor: pointer;
@@ -1788,7 +1788,7 @@ body {
                     gap: 8px;
                     margin-bottom: 40px;
 
-                    .sign-up-method {
+                    .sign-up-method, .sign-in-method {
                         width: 300px;
                         display: flex;
                         flex-wrap: wrap;

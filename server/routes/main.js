@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 import Post from "../models/post.js";
-// import EditorJS from '@editorjs/editorjs';
+import { authMiddleware } from "./admin.js";
 
 //routes
 // router.get("/", async (req, res) => {
@@ -17,7 +17,7 @@ import Post from "../models/post.js";
 //   }
 // });
 
-router.get("/home", async (req, res) => {
+router.get("/home", authMiddleware, async (req, res) => {
   const locals = {
     title: "nodeJS blog",
   };
@@ -30,7 +30,7 @@ router.get("/home", async (req, res) => {
   }
 });
 
-router.get("/article", (req, res) => {
+router.get("/article", authMiddleware, (req, res) => {
   res.render("article.ejs");
 });
 
@@ -40,7 +40,7 @@ router.get("/write", (req, res) => {
 
 
 //article route
-router.get("/article/:id", async (req, res) => {
+router.get("/article/:id", authMiddleware, async (req, res) => {
   try {
     let slug = req.params.id;
     const data = await Post.findById({ _id: slug });
@@ -60,7 +60,7 @@ router.get("/article/:id", async (req, res) => {
 });
 
 //search route
-router.post("/search", async (req, res) => {
+router.post("/search", authMiddleware, async (req, res) => {
   try {
     const locals = {
       title: "Search",

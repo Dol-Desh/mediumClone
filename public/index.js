@@ -45,11 +45,28 @@ setupModal(
   "sign-in-button",
   "sign-in-modal"
 );
+
 setupModal(
   "sign-in-modal",
   "sign-in-button",
   "sign-in-close",
   "sign-up-button",
+  "sign-up-modal"
+);
+
+setupModal(
+  "email-sign-in-modal",
+  "open-gmail-sign-in",
+  "sign-in-email-close",
+  "all-sign-in-options",
+  "sign-in-modal"
+);
+
+setupModal(
+  "email-sign-up-modal",
+  "open-gmail-sign-up",
+  "sign-up-email-close",
+  "all-sign-up-options",
   "sign-up-modal"
 );
 
@@ -124,8 +141,9 @@ document
   .getElementById("toggleSearchFunctionality")
   .addEventListener("click", toggleSearch);
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-  const allButtons = document.getElementById("toggleSearchFunctionality");
-  const searchBar = document.getElementById("searchMobileContainer");
-});
+//   const allButtons = document.getElementById("toggleSearchFunctionality");
+//   const searchBar = document.getElementById("searchMobileContainer");
+//   const searchInput = document.getElementById("searchInput");
+// });
