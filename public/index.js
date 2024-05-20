@@ -137,13 +137,8 @@ function toggleSearch() {
   }
 }
 
-document
-  .getElementById("toggleSearchFunctionality")
-  .addEventListener("click", toggleSearch);
+// document
+//   .getElementById("toggleSearchFunctionality")
+//   .addEventListener("click", toggleSearch);
 
-// document.addEventListener("DOMContentLoaded", function () {
 
-//   const allButtons = document.getElementById("toggleSearchFunctionality");
-//   const searchBar = document.getElementById("searchMobileContainer");
-//   const searchInput = document.getElementById("searchInput");
-// });

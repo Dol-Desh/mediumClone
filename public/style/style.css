@@ -2044,24 +2044,4 @@ body .h5.bold {
   max-width: 1024px;
   margin: 0 auto;
   height: 100vh;
-}
-#write .write-section {
-  margin: 0px 20px;
-}
-#write .write-section .write-title-wrapper {
-  margin-top: 24px;
-}
-#write .write-section .write-title-wrapper input[type=search] {
-  display: flex;
-  padding: 0rem 0.5rem;
-  border: none;
-  outline: none;
-  font-size: 1.75rem;
-  font-weight: 500;
-  color: var(--black);
-  width: 100%;
-}
-#write .write-section .h {
-  background-color: #1a8917;
-  padding: 16px;
 }/*# sourceMappingURL=style.css.map */
